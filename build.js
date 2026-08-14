@@ -21,6 +21,11 @@ const SITE = {
   write7in7Url: 'https://write7in7.com',
 };
 
+// Toggle the "completed projects" section on the funding page. Flip back to
+// true once there's a first finished project to show — content stays in
+// data/funded-projects.json (funded.completed) either way.
+const SHOW_COMPLETED = false;
+
 const scripts = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/scripts.json'), 'utf8'));
 const funded = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/funded-projects.json'), 'utf8'));
 
@@ -236,7 +241,7 @@ function campaignRow(p) {
       <div class="row-body">
         <div class="card-title">${esc(p.name)}</div>
         <div class="eyebrow">${esc(p.type)}</div>
-        <div class="status-pill">${esc(p.statusText)}</div>
+        ${p.logline ? `<p class="status-pill">${esc(p.logline)}</p>` : ''}
         <div class="card-link">${linkLabel(p.url, 'view campaign')}</div>
       </div>`;
   return p.url
@@ -277,14 +282,14 @@ ${header(false)}
   </div>
 </section>
 
-<section class="section section--archive">
+${SHOW_COMPLETED ? `<section class="section section--archive">
   <div class="wrap">
     <span class="eyebrow section-label completed">completed projects</span>
     <div class="grid grid--funded-completed">
       ${funded.completed.length ? funded.completed.map(completedCard).join('\n      ') : '<p class="empty-note">Nothing here yet.</p>'}
     </div>
   </div>
-</section>
+</section>` : ''}
 
 ${footer(false)}`;
   fs.writeFileSync(path.join(ROOT, 'funding.html'), html);

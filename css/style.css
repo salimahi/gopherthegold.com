@@ -490,7 +490,9 @@ a.card, a.card-row {
 .card-row .card-title { font-size: 15px; }
 
 .status-pill {
+  margin: 0;
   font-size: 12px;
+  line-height: 1.4;
   color: rgba(30, 36, 38, 0.7);
 }
 
