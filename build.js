@@ -26,6 +26,10 @@ const SITE = {
 // data/funded-projects.json (funded.completed) either way.
 const SHOW_COMPLETED = false;
 
+// Toggle the homepage's "From the archive" section — flip back to true once
+// the first script is complete. Content stays in data/scripts.json either way.
+const SHOW_ARCHIVE = false;
+
 const scripts = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/scripts.json'), 'utf8'));
 const funded = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/funded-projects.json'), 'utf8'));
 
@@ -152,7 +156,7 @@ ${header(false)}
   </div>
 </section>
 
-<section class="section section--archive">
+${SHOW_ARCHIVE ? `<section class="section section--archive">
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow">gold</div>
@@ -162,7 +166,7 @@ ${header(false)}
       ${archive.map(archiveItem).join('\n      ')}
     </div>
   </div>
-</section>
+</section>` : ''}
 
 <section class="promo">
   <div class="wrap">
