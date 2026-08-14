@@ -269,7 +269,7 @@ ${header(false)}
 <div class="funding-intro">
   <div class="wrap">
     <h1>Projects we&rsquo;re funding</h1>
-    <p>Cool stuff by cool people — campaigns and finished work we&rsquo;ve backed.</p>
+    <p>Cool stuff by people we dig.</p>
   </div>
 </div>
 
