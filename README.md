@@ -77,9 +77,10 @@ copy/assets were supplied yet. Before going live, replace:
   `data/scripts.json`
 - Real funded-project names, thumbnails, and campaign URLs in
   `data/funded-projects.json`
-- The Write 7 in 7 competition URL — currently `null` in `build.js`
-  (`SITE.write7in7Url`), which renders as "coming soon" until set
 - Poster/thumbnail/hero images — currently placeholder dashed boxes
+- Build the About and Contact pages (nav already links to `about.html` /
+  `contact.html`, which don't exist yet — they were pulled off the homepage
+  to become their own pages)
 
 ## Design tokens
 

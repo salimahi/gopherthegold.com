@@ -18,8 +18,7 @@ const SITE = {
   name: 'Gopher the Gold Productions',
   email: 'contact@gopherthegold.com',
   year: 2026,
-  // TODO: replace with the real Write 7 in 7 competition URL when available.
-  write7in7Url: null,
+  write7in7Url: 'https://write7in7.com',
 };
 
 const scripts = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/scripts.json'), 'utf8'));
@@ -78,8 +77,8 @@ function header(depth) {
         <li><a${externalLinkAttrs(SITE.write7in7Url)}>Compete</a></li>
         <li><a href="${prefix}index.html#writers-room">Watch</a></li>
         <li><a href="${prefix}funding.html">Fund</a></li>
-        <li><a href="${prefix}index.html#about">About</a></li>
-        <li><a href="${prefix}index.html#contact">Contact</a></li>
+        <li><a href="${prefix}about.html">About</a></li>
+        <li><a href="${prefix}contact.html">Contact</a></li>
       </ul>
     </nav>
   </div>
@@ -120,7 +119,7 @@ function archiveItem(s) {
 
 function buildHomepage() {
   const html = `${head(
-    `${SITE.name} — Stories need more chances.`,
+    `${SITE.name} — Gopher creativity.`,
     'Gopher the Gold Productions gives people more chances to create: a writing competition, original scripts in development, and funding for other creative projects.',
     false
   )}
@@ -131,8 +130,8 @@ ${header(false)}
     <img src="assets/logo.png" alt="${esc(SITE.name)} logo">
   </div>
   <div class="hero-copy">
-    <h1>Stories need more chances.</h1>
-    <p class="tagline">Whatever form it takes, we dig it — Gopher the Gold gives writers, filmmakers, and creators more chances to make their work.</p>
+    <h1>Gopher creativity.</h1>
+    <p class="tagline">Whatever form, we dig it.</p>
   </div>
 </section>
 
@@ -170,26 +169,6 @@ ${header(false)}
       <div class="eyebrow">projects we&rsquo;re funding</div>
       <div class="promo-headline">cool stuff we dig ↗</div>
     </a>
-  </div>
-</section>
-
-<section class="section section--about" id="about">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">about</div>
-      <h2>More chances to create</h2>
-    </div>
-    <p>Gopher the Gold Productions is a production company that gives people more chances to create — by hosting the Write 7 in 7 competition, producing original scripts of our own, and funding and highlighting other people&rsquo;s creative projects. Whatever form it takes, we dig it.</p>
-  </div>
-</section>
-
-<section class="section section--contact" id="contact">
-  <div class="wrap">
-    <div class="eyebrow">contact</div>
-    <h2>Say hello</h2>
-    <div class="contact-row">
-      <a class="contact-email" href="mailto:${esc(SITE.email)}">${esc(SITE.email)}</a>
-    </div>
   </div>
 </section>
 
