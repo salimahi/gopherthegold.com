@@ -163,7 +163,7 @@ ${header(false)}
   <div class="wrap">
     <a class="promo-item"${externalLinkAttrs(SITE.write7in7Url)}>
       <div class="eyebrow">write 7 in 7</div>
-      <div class="promo-headline">${linkLabel(SITE.write7in7Url, 'start writing already')} ↗</div>
+      <div class="promo-headline">${SITE.write7in7Url ? 'start writing already ↗' : 'start writing already — coming soon'}</div>
     </a>
     <a class="promo-item" href="funding.html">
       <div class="eyebrow">projects we&rsquo;re funding</div>
