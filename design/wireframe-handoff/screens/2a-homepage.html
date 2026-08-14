@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Homepage — Magazine grid</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@400;500&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#f0eee9;font-family:'Public Sans',sans-serif;display:flex;justify-content:center;padding:40px 20px}
+.wf{font-family:'Kiwi Maru',serif;color:#1e2426}
+.wf-box{border:2px solid #1e2426;background:#fff}
+.wf-dash{border:2px dashed rgba(30,36,38,.5);background:repeating-linear-gradient(135deg,rgba(30,36,38,.04) 0 6px,transparent 6px 12px)}
+.wf-tag{font-family:ui-monospace,Menlo,monospace;font-size:9px;color:rgba(30,36,38,.5);text-transform:uppercase;letter-spacing:.04em}
+.wf-btn{font-family:'Kiwi Maru',serif;border:2px solid #1e2426;padding:8px 16px;border-radius:20px;display:inline-block;font-size:13px}
+.dv-card{max-width:100%;background:#fff;border:1.5px solid #1e2426;border-radius:2px;box-shadow:3px 3px 0 rgba(30,36,38,.15);overflow:hidden}
+</style>
+</head>
+<body>
+<div class="dv-card wf" style="width:420px">
+  <div style="padding:12px 20px;display:flex;justify-content:space-between;align-items:center;background:#1E2426;color:#fff">
+    <img src="../assets/logo-white.svg" style="height:34px">
+    <div style="display:flex;gap:12px;font-size:11px;color:#ECDABE" class="wf-tag">Compete · Watch · Fund · About · Contact</div>
+  </div>
+  <div style="display:grid;grid-template-columns:1.3fr 1fr;gap:0">
+    <div style="min-height:150px;display:flex;align-items:center;justify-content:center;background:#CF9181"><img src="../assets/logo.png" style="height:120px"></div>
+    <div style="padding:18px;background:#ECDABE;display:flex;flex-direction:column;justify-content:center;gap:8px">
+      <div style="font-size:20px;color:#1e2426">Gopher creativity.</div>
+      <div class="wf-tag">WHATEVER FORM, WE DIG IT.</div>
+    </div>
+  </div>
+  <div style="padding:20px 20px 8px"><div class="wf-tag">TUNNELING THROUGH</div>
+    <div style="font-size:16px;margin-top:4px;color:#1e2426">In the Writers' Room</div>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:0 20px 20px">
+    <div class="wf-box" style="padding:10px;border-color:#8D6837"><div class="wf-dash" style="height:60px;margin-bottom:8px"></div><div style="font-size:12px;color:#1e2426">"Script Title A"</div><div class="wf-tag">status: in development</div><div style="font-size:11px;color:#BB5D33;margin-top:6px;font-family:'Public Sans',sans-serif">learn more →</div></div>
+    <div class="wf-box" style="padding:10px;border-color:#8D6837"><div class="wf-dash" style="height:60px;margin-bottom:8px"></div><div style="font-size:12px;color:#1e2426">"Script Title B"</div><div class="wf-tag">status: pre-production</div><div style="font-size:11px;color:#BB5D33;margin-top:6px;font-family:'Public Sans',sans-serif">learn more →</div></div>
+  </div>
+  <div style="padding:16px 20px 8px"><div class="wf-tag">GOLD</div>
+    <div style="font-size:16px;margin-top:4px;color:#1e2426">From the archive</div>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;padding:0 20px 20px">
+    <div style="display:flex;flex-direction:column;gap:6px"><div class="wf-dash" style="height:44px"></div><div style="font-size:10px;color:#1e2426">"Title C" · 2024</div><div style="font-size:10px;color:#BB5D33;font-family:'Public Sans',sans-serif">learn more →</div></div>
+    <div style="display:flex;flex-direction:column;gap:6px"><div class="wf-dash" style="height:44px"></div><div style="font-size:10px;color:#1e2426">"Title D" · 2023</div><div style="font-size:10px;color:#BB5D33;font-family:'Public Sans',sans-serif">learn more →</div></div>
+    <div style="display:flex;flex-direction:column;gap:6px"><div class="wf-dash" style="height:44px"></div><div style="font-size:10px;color:#1e2426">"Title E" · 2023</div><div style="font-size:10px;color:#BB5D33;font-family:'Public Sans',sans-serif">learn more →</div></div>
+  </div>
+  <div style="background:#314939;color:#fff;padding:20px;display:flex;gap:14px">
+    <div style="flex:1"><div class="wf-tag" style="color:#ECDABE">write 7 in 7</div><div style="font-size:14px;margin-top:4px">start writing already ↗</div></div>
+    <div style="flex:1"><div class="wf-tag" style="color:#ECDABE">projects we're funding</div><div style="font-size:14px;margin-top:4px">cool stuff we dig↗</div></div>
+  </div>
+  <div style="padding:10px 20px;display:flex;justify-content:space-between;align-items:center;gap:16px;font-family:'Public Sans',sans-serif;font-size:9px;background:#BB5D33;color:#fff"><span>contact@gopherthegold.com</span><span style="opacity:.85">© 2026 Gopher the Gold Productions. All rights reserved.</span></div>
+</div>
+</body>
+</html>

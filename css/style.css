@@ -1,0 +1,528 @@
+/* Gopher the Gold Productions — site stylesheet
+   Design tokens sourced from the wireframe handoff brand guide. */
+
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@400;500&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+:root {
+  --cream: #ECDABE;
+  --gold: #8D6837;
+  --pink: #CF9181;
+  --orange: #BB5D33;
+  --green: #314939;
+  --ink: #1E2426;
+
+  --page-bg: #FAF6EE;
+  --card-bg: #FFFFFF;
+  --card-border: rgba(30, 36, 38, 0.85);
+  --card-shadow: 3px 3px 0 rgba(30, 36, 38, 0.12);
+
+  --font-display: 'Kiwi Maru', serif;
+  --font-body: 'Public Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --content-max: 1100px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--page-bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+
+a { color: inherit; }
+
+.wrap {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(30, 36, 38, 0.55);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  margin: 0;
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+/* ---------- Header ---------- */
+
+.site-header {
+  background: var(--ink);
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 40;
+}
+
+.site-header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  gap: 16px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand img { height: 36px; width: auto; }
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: var(--cream);
+  padding-bottom: 2px;
+  border-bottom: 1.5px solid transparent;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.main-nav a:hover,
+.main-nav a:focus-visible {
+  color: #fff;
+  border-bottom-color: var(--orange);
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 1.5px solid var(--cream);
+  border-radius: 6px;
+  color: var(--cream);
+  padding: 6px 10px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 760px) {
+  .hero { grid-template-columns: 1.2fr 1fr; }
+}
+
+.hero-art {
+  background: var(--pink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+  min-height: 220px;
+}
+
+.hero-art img { max-height: 260px; width: auto; }
+
+.hero-copy {
+  background: var(--cream);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+  padding: 48px 32px;
+}
+
+.hero-copy h1 {
+  font-size: clamp(30px, 4vw, 46px);
+  color: var(--ink);
+}
+
+.hero-copy .tagline {
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: rgba(30, 36, 38, 0.75);
+  max-width: 34ch;
+}
+
+/* ---------- Sections ---------- */
+
+.section {
+  padding: 56px 0;
+}
+
+.section-head {
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.section-head h2 {
+  font-size: 26px;
+}
+
+.section--archive { background: rgba(141, 104, 55, 0.06); }
+
+/* ---------- Card grids ---------- */
+
+.grid {
+  display: grid;
+  gap: 20px;
+}
+
+.grid--writers-room {
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+}
+
+.grid--archive {
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 24px;
+}
+
+.grid--funded-completed {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1.5px solid var(--card-border);
+  border-radius: 4px;
+  box-shadow: var(--card-shadow);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+a.card, a.card-row {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0 rgba(30, 36, 38, 0.15);
+}
+
+.thumb {
+  aspect-ratio: 16 / 10;
+  background: repeating-linear-gradient(135deg, rgba(30,36,38,.06) 0 8px, rgba(30,36,38,.02) 8px 16px);
+  border: 1.5px dashed rgba(30, 36, 38, 0.35);
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.thumb img { width: 100%; height: 100%; object-fit: cover; }
+
+.thumb-label {
+  font-family: ui-monospace, Menlo, monospace;
+  font-size: 9px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: rgba(30, 36, 38, 0.4);
+}
+
+.card-title {
+  font-family: var(--font-display);
+  font-size: 17px;
+}
+
+.card-status { font-size: 11px; }
+
+.card-link {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--orange);
+}
+
+/* archive (smaller, no border card — just stacked content) */
+.archive-item { display: flex; flex-direction: column; gap: 8px; text-decoration: none; color: inherit; }
+.archive-item .card-title { font-size: 14px; }
+.archive-item .card-link { color: var(--orange); }
+
+/* ---------- Promo banner (two-up) ---------- */
+
+.promo {
+  background: var(--green);
+  color: #fff;
+}
+
+.promo .wrap {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
+@media (min-width: 620px) {
+  .promo .wrap { grid-template-columns: 1fr 1fr; gap: 0; }
+}
+
+.promo-item {
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-decoration: none;
+  color: #fff;
+  border-top: 1px solid rgba(255,255,255,0.12);
+}
+
+@media (min-width: 620px) {
+  .promo-item:first-child { border-right: 1px solid rgba(255,255,255,0.12); border-top: none; }
+  .promo-item:last-child { border-top: none; }
+}
+
+.promo-item .eyebrow { color: var(--cream); }
+
+.promo-item .promo-headline {
+  font-family: var(--font-display);
+  font-size: 20px;
+  transition: opacity 0.15s ease;
+}
+
+.promo-item:hover .promo-headline { opacity: 0.8; }
+
+/* ---------- About / Contact ---------- */
+
+.section--about .wrap,
+.section--contact .wrap {
+  max-width: 760px;
+}
+
+.section--about p {
+  font-size: 16px;
+  color: rgba(30, 36, 38, 0.85);
+}
+
+.section--contact {
+  background: var(--pink);
+}
+
+.contact-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 10px 24px;
+  margin-top: 16px;
+}
+
+.contact-email {
+  font-family: var(--font-display);
+  font-size: 22px;
+  text-decoration: none;
+  border-bottom: 1.5px solid var(--ink);
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  background: var(--orange);
+  color: #fff;
+}
+
+.site-footer .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px 20px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  font-size: 12px;
+}
+
+.site-footer a { text-decoration: underline; text-underline-offset: 2px; }
+
+/* ---------- Detail page (scripts) ---------- */
+
+.back-link {
+  display: inline-block;
+  margin: 28px 0 0;
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(30, 36, 38, 0.6);
+  text-decoration: none;
+}
+
+.back-link:hover { color: var(--orange); }
+
+.detail-head { padding: 14px 0 28px; max-width: 760px; }
+
+.detail-head .status { margin-bottom: 8px; }
+
+.detail-head h1 {
+  font-size: clamp(28px, 4vw, 40px);
+  margin-bottom: 8px;
+}
+
+.detail-head .logline {
+  font-size: 15px;
+  color: rgba(30, 36, 38, 0.7);
+}
+
+.poster {
+  aspect-ratio: 16 / 9;
+  max-height: 480px;
+  background: repeating-linear-gradient(135deg, rgba(30,36,38,.06) 0 10px, rgba(30,36,38,.02) 10px 20px);
+  border: 1.5px dashed rgba(30, 36, 38, 0.35);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 36px;
+  overflow: hidden;
+}
+
+.poster img { width: 100%; height: 100%; object-fit: cover; }
+
+.detail-body {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  padding-bottom: 48px;
+}
+
+@media (min-width: 760px) {
+  .detail-body { grid-template-columns: 1.6fr 1fr; }
+}
+
+.synopsis p { font-size: 15px; margin: 0 0 14px; color: rgba(30, 36, 38, 0.9); }
+
+.credits { display: flex; flex-direction: column; gap: 10px; align-self: start; }
+
+.credit-row {
+  border: 1.5px solid var(--gold);
+  border-radius: 3px;
+  padding: 10px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  background: #fff;
+}
+
+.credit-row .value { font-size: 13px; font-weight: 600; }
+
+.media-block { padding-bottom: 56px; }
+
+.media-placeholder {
+  border: 1.5px dashed rgba(30, 36, 38, 0.35);
+  border-radius: 4px;
+  min-height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  text-align: center;
+  padding: 20px;
+}
+
+.media-placeholder iframe { width: 100%; aspect-ratio: 16/9; border: 0; }
+
+/* ---------- Funding page ---------- */
+
+.funding-intro {
+  background: var(--cream);
+  text-align: center;
+  padding: 56px 0;
+}
+
+.funding-intro h1 { font-size: clamp(28px, 4vw, 40px); }
+
+.funding-intro p {
+  max-width: 50ch;
+  margin: 12px auto 0;
+  font-size: 15px;
+  color: rgba(30, 36, 38, 0.75);
+}
+
+.section-label { display: block; margin-bottom: 18px; }
+.section-label.seed { color: var(--orange); }
+.section-label.completed { color: var(--green); }
+
+.campaign-list { display: flex; flex-direction: column; gap: 14px; }
+
+.card-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px;
+  border: 1.5px solid var(--orange);
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: var(--card-shadow);
+}
+
+.card-row .thumb { width: 84px; height: 84px; flex: none; aspect-ratio: auto; }
+.card-row .row-body { flex: 1; display: flex; flex-direction: column; gap: 4px; }
+.card-row .card-title { font-size: 15px; }
+
+.status-pill {
+  font-size: 12px;
+  color: rgba(30, 36, 38, 0.7);
+}
+
+.empty-note {
+  font-size: 13px;
+  color: rgba(30, 36, 38, 0.55);
+  font-style: italic;
+  padding: 8px 0;
+}
+
+/* ---------- Mobile nav ---------- */
+
+@media (max-width: 700px) {
+  .nav-toggle { display: inline-flex; }
+
+  .main-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--ink);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease;
+  }
+
+  .main-nav.open { max-height: 320px; padding: 8px 20px 16px; }
+
+  .main-nav li { width: 100%; }
+  .main-nav a { display: block; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
+}

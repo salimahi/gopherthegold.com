@@ -1,0 +1,30 @@
+{
+  "active": [
+    {
+      "name": "Project Name",
+      "type": "seed & spark campaign",
+      "statusText": "seed campaign · ends in 12 days",
+      "url": null,
+      "thumbnail": null
+    },
+    {
+      "name": "Project Name",
+      "type": "seed & spark campaign",
+      "statusText": "spark campaign · funded 60%",
+      "url": null,
+      "thumbnail": null
+    }
+  ],
+  "completed": [
+    {
+      "name": "Project Name",
+      "url": null,
+      "thumbnail": null
+    },
+    {
+      "name": "Project Name",
+      "url": null,
+      "thumbnail": null
+    }
+  ]
+}

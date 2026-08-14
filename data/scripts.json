@@ -1,0 +1,89 @@
+[
+  {
+    "slug": "script-title-a",
+    "title": "Script Title A",
+    "section": "writers-room",
+    "status": "in development",
+    "year": null,
+    "writer": "Name",
+    "director": "Name / TBD",
+    "stage": "in development",
+    "logline": "One-line logline about the story, written by [writer name].",
+    "synopsis": [
+      "Two to three paragraphs describing the project, its themes, and why Gopher the Gold is producing it go here.",
+      "Replace this placeholder copy with the real synopsis once it's provided by the writer/producer."
+    ],
+    "poster": null,
+    "embedUrl": null,
+    "scriptUrl": null
+  },
+  {
+    "slug": "script-title-b",
+    "title": "Script Title B",
+    "section": "writers-room",
+    "status": "pre-production",
+    "year": null,
+    "writer": "Name",
+    "director": "Name / TBD",
+    "stage": "pre-production",
+    "logline": "One-line logline about the story, written by [writer name].",
+    "synopsis": [
+      "Two to three paragraphs describing the project, its themes, and why Gopher the Gold is producing it go here.",
+      "Replace this placeholder copy with the real synopsis once it's provided by the writer/producer."
+    ],
+    "poster": null,
+    "embedUrl": null,
+    "scriptUrl": null
+  },
+  {
+    "slug": "title-c",
+    "title": "Title C",
+    "section": "archive",
+    "status": "produced",
+    "year": 2024,
+    "writer": "Name",
+    "director": "Name",
+    "stage": "produced",
+    "logline": "One-line logline about the story, written by [writer name].",
+    "synopsis": [
+      "Two to three paragraphs describing the finished project go here."
+    ],
+    "poster": null,
+    "embedUrl": null,
+    "scriptUrl": null
+  },
+  {
+    "slug": "title-d",
+    "title": "Title D",
+    "section": "archive",
+    "status": "produced",
+    "year": 2023,
+    "writer": "Name",
+    "director": "Name",
+    "stage": "produced",
+    "logline": "One-line logline about the story, written by [writer name].",
+    "synopsis": [
+      "Two to three paragraphs describing the finished project go here."
+    ],
+    "poster": null,
+    "embedUrl": null,
+    "scriptUrl": null
+  },
+  {
+    "slug": "title-e",
+    "title": "Title E",
+    "section": "archive",
+    "status": "produced",
+    "year": 2023,
+    "writer": "Name",
+    "director": "Name",
+    "stage": "produced",
+    "logline": "One-line logline about the story, written by [writer name].",
+    "synopsis": [
+      "Two to three paragraphs describing the finished project go here."
+    ],
+    "poster": null,
+    "embedUrl": null,
+    "scriptUrl": null
+  }
+]

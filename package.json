@@ -1,0 +1,9 @@
+{
+  "name": "gopher-the-gold-website",
+  "version": "1.0.0",
+  "description": "Public website for Gopher the Gold Productions, built as a static site for GitHub Pages.",
+  "private": true,
+  "scripts": {
+    "build": "node build.js"
+  }
+}
