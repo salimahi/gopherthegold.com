@@ -67,7 +67,7 @@ function head(title, description, depth) {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(description)}">
-<link rel="icon" href="${prefix}assets/logo.png">
+<link rel="icon" href="${prefix}assets/favicon.png">
 <link rel="stylesheet" href="${prefix}css/style.css">
 </head>
 <body>`;
@@ -78,7 +78,7 @@ function header(depth) {
   return `<header class="site-header">
   <div class="wrap">
     <a class="brand" href="${prefix}index.html" aria-label="${esc(SITE.name)} home">
-      <img src="${prefix}assets/logo-white.svg" alt="${esc(SITE.name)}">
+      <img src="${prefix}assets/logo-header.svg" alt="${esc(SITE.name)}">
     </a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menu</button>
     <nav aria-label="Primary">
@@ -136,7 +136,7 @@ ${header(false)}
 
 <section class="hero">
   <div class="hero-art">
-    <img src="assets/logo.png" alt="${esc(SITE.name)} logo">
+    <img src="assets/logo-hero.svg" alt="${esc(SITE.name)} logo">
   </div>
   <div class="hero-copy">
     <h1>Gopher creativity.</h1>
