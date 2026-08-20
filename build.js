@@ -205,26 +205,27 @@ ${header(true)}
 <div class="wrap">
   <a class="back-link" href="../index.html#writers-room">&larr; back to scripts</a>
 
-  <div class="detail-head">
-    <div class="eyebrow status">status: ${esc(s.status)}</div>
-    <h1>&ldquo;${esc(s.title)}&rdquo;</h1>
-    ${s.logline ? `<p class="logline">${esc(s.logline)}</p>` : ''}
+  <div class="detail-top">
+    <div class="poster">
+      ${s.poster ? `<img src="../${esc(s.poster)}" alt="${esc(s.title)} poster">` : '<span class="eyebrow">poster / key art</span>'}
+    </div>
+    <div class="detail-info">
+      <div class="detail-head">
+        <div class="eyebrow status">status: ${esc(s.status)}</div>
+        <h1>&ldquo;${esc(s.title)}&rdquo;</h1>
+        ${s.logline ? `<p class="logline">${esc(s.logline)}</p>` : ''}
+      </div>
+      <div class="credits">
+        ${creditRow('writer', s.writer)}
+        ${creditRow('director', s.director)}
+        ${creditRow('stage', s.stage)}
+      </div>
+    </div>
   </div>
 
-  <div class="poster">
-    ${s.poster ? `<img src="../${esc(s.poster)}" alt="${esc(s.title)} poster">` : '<span class="eyebrow">poster / key art</span>'}
-  </div>
-
-  <div class="detail-body">
-    <div class="synopsis">
-      <div class="eyebrow" style="margin-bottom:10px">synopsis</div>
-      ${s.synopsis.map((p) => `<p>${esc(p)}</p>`).join('\n      ')}
-    </div>
-    <div class="credits">
-      ${creditRow('writer', s.writer)}
-      ${creditRow('director', s.director)}
-      ${creditRow('stage', s.stage)}
-    </div>
+  <div class="synopsis">
+    <div class="eyebrow" style="margin-bottom:10px">synopsis</div>
+    ${s.synopsis.map((p) => `<p>${esc(p)}</p>`).join('\n    ')}
   </div>
 
   <div class="media-block">

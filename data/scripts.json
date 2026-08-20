@@ -1,19 +1,19 @@
 [
   {
-    "slug": "script-title-a",
-    "title": "Script Title A",
+    "slug": "this-again",
+    "title": "This Again",
     "section": "writers-room",
-    "status": "in development",
+    "status": "post-production",
     "year": null,
-    "writer": "Name",
-    "director": "Name / TBD",
-    "stage": "in development",
-    "logline": "One-line logline about the story, written by [writer name].",
+    "writer": "Salimah Ismail",
+    "director": "Salimah Ismail & Tu Nguyen",
+    "stage": "post-production",
+    "logline": "Some cycles don't break. Jenna and Cal are stuck in a few.",
     "synopsis": [
       "Two to three paragraphs describing the project, its themes, and why Gopher the Gold is producing it go here.",
       "Replace this placeholder copy with the real synopsis once it's provided by the writer/producer."
     ],
-    "poster": null,
+    "poster": "assets/poster/This-Again-Poster.png",
     "embedUrl": null,
     "scriptUrl": null
   },
