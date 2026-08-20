@@ -84,10 +84,10 @@ function header(depth) {
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menu</button>
     <nav aria-label="Primary">
       <ul class="main-nav" id="main-nav">
-        <li><a${externalLinkAttrs(SITE.write7in7Url)}>Compete</a></li>
-        <li><a href="${prefix}index.html#writers-room">Watch</a></li>
-        <li><a href="${prefix}funding.html">Fund</a></li>
         <li><a href="${prefix}about.html">About</a></li>
+        <li><a href="${prefix}index.html#writers-room">Watch</a></li>
+        <li><a${externalLinkAttrs(SITE.write7in7Url)}>Compete</a></li>
+        <li><a href="${prefix}funding.html">Fund</a></li>
         <li><a href="${prefix}contact.html">Contact</a></li>
       </ul>
     </nav>
