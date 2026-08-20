@@ -18,20 +18,19 @@
     "scriptUrl": null
   },
   {
-    "slug": "script-title-b",
-    "title": "Script Title B",
+    "slug": "SMAM",
+    "title": "The Society of Middle Aged Muscles",
     "section": "writers-room",
     "status": "pre-production",
     "year": null,
-    "writer": "Name",
-    "director": "Name / TBD",
+    "writer": "Moriah Young & Salimah Ismail",
+    "director": "TBD",
     "stage": "pre-production",
-    "logline": "One-line logline about the story, written by [writer name].",
+    "logline": "An olympic weightlifting mockumentary",
     "synopsis": [
-      "Two to three paragraphs describing the project, its themes, and why Gopher the Gold is producing it go here.",
-      "Replace this placeholder copy with the real synopsis once it's provided by the writer/producer."
+      "A former crossfitter gets inducted into and olympic weighlifting team that gives her more than a good workout."
     ],
-    "poster": null,
+    "poster": "assets/poster/Coming-Soon.png",
     "embedUrl": null,
     "scriptUrl": null
   },
