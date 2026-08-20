@@ -446,6 +446,14 @@ a.card, a.card-row {
 
 .credit-row .value { font-size: 13px; font-weight: 600; }
 
+.credit-row .value a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.credit-row .value a:hover { color: var(--orange); }
+
 .media-block { padding-bottom: 56px; }
 
 .media-placeholder {

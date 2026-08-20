@@ -187,9 +187,22 @@ ${footer(false)}`;
 
 // ---------- script detail pages ----------
 
-function creditRow(label, value) {
-  if (!value) return '';
-  return `<div class="credit-row"><span class="eyebrow">${esc(label)}</span><span class="value">${esc(value)}</span></div>`;
+// A credit can be a plain string, or a person / list of people, each
+// optionally linked (e.g. to an IMDb page): { name, url }.
+function personHtml(p) {
+  if (typeof p === 'string') return esc(p);
+  const name = esc(p.name);
+  return p.url ? `<a href="${esc(p.url)}" target="_blank" rel="noopener">${name}</a>` : name;
+}
+
+function peopleHtml(people) {
+  if (!people) return '';
+  return (Array.isArray(people) ? people : [people]).map(personHtml).join(' &amp; ');
+}
+
+function creditRow(label, valueHtml) {
+  if (!valueHtml) return '';
+  return `<div class="credit-row"><span class="eyebrow">${esc(label)}</span><span class="value">${valueHtml}</span></div>`;
 }
 
 function buildScriptPage(s) {
@@ -216,9 +229,10 @@ ${header(true)}
         ${s.logline ? `<p class="logline">${esc(s.logline)}</p>` : ''}
       </div>
       <div class="credits">
-        ${creditRow('writer', s.writer)}
-        ${creditRow('director', s.director)}
-        ${creditRow('stage', s.stage)}
+        ${creditRow('writer', peopleHtml(s.writer))}
+        ${creditRow('director', peopleHtml(s.director))}
+        ${creditRow('cinematographer', peopleHtml(s.cinematographer))}
+        ${creditRow('stage', s.stage ? esc(s.stage) : '')}
       </div>
     </div>
   </div>

@@ -5,8 +5,16 @@
     "section": "writers-room",
     "status": "post-production",
     "year": null,
-    "writer": "Salimah Ismail",
-    "director": "Salimah Ismail & Tu Nguyen",
+    "writer": [
+      { "name": "Salimah Ismail", "url": "https://www.imdb.com/name/nm18761247/?ref_=fn_t_1" }
+    ],
+    "director": [
+      { "name": "Salimah Ismail", "url": "https://www.imdb.com/name/nm18761247/?ref_=fn_t_1" },
+      { "name": "Tu Nguyen", "url": "https://www.imdb.com/name/nm18767943/?ref_=tt_cst_1_1" }
+    ],
+    "cinematographer": [
+      { "name": "R Jay Molina", "url": "https://www.imdb.com/name/nm4454777/?ref_=nv_sr_srsg_0_tt_0_nm_8_in_0_q_r%20jay%20molina" }
+    ],
     "stage": "post-production",
     "logline": "Some cycles don't break. Jenna and Cal are stuck in a few.",
     "synopsis": [
@@ -18,13 +26,45 @@
     "scriptUrl": null
   },
   {
+    "slug": "richmond-horror-48",
+    "title": "Richmond Horror 48 Film",
+    "section": "writers-room",
+    "status": "pre-production",
+    "year": null,
+    "writer": [
+      { "name": "TBD", "url": null }
+    ],
+    "director": [
+      { "name": "TBD", "url": null }
+    ],
+    "cinematographer": [
+      { "name": "TBD", "url": null }
+    ],
+    "stage": "pre-production",
+    "logline": "A film based on the genre and prompts given October 8th 2026.",
+    "synopsis": [
+      "TBD"
+    ],
+    "poster": "assets/poster/Horror-48-2026.jpg",
+    "embedUrl": null,
+    "scriptUrl": null
+  },
+  {
     "slug": "SMAM",
     "title": "The Society of Middle Aged Muscles",
     "section": "writers-room",
     "status": "pre-production",
     "year": null,
-    "writer": "Moriah Young & Salimah Ismail",
-    "director": "TBD",
+    "writer": [
+      { "name": "Moriah Young", "url": null },
+      { "name": "Salimah Ismail", "url": "https://www.imdb.com/name/nm18761247/?ref_=fn_t_1" }
+    ],
+    "director": [
+      { "name": "TBD", "url": null }
+    ],
+    "cinematographer": [
+      { "name": "TBD", "url": null }
+    ],
     "stage": "pre-production",
     "logline": "An olympic weightlifting mockumentary",
     "synopsis": [
@@ -40,8 +80,15 @@
     "section": "archive",
     "status": "produced",
     "year": 2024,
-    "writer": "Name",
-    "director": "Name",
+    "writer": [
+      { "name": "Name", "url": null }
+    ],
+    "director": [
+      { "name": "Name", "url": null }
+    ],
+    "cinematographer": [
+      { "name": "Name", "url": null }
+    ],
     "stage": "produced",
     "logline": "One-line logline about the story, written by [writer name].",
     "synopsis": [
@@ -57,8 +104,15 @@
     "section": "archive",
     "status": "produced",
     "year": 2023,
-    "writer": "Name",
-    "director": "Name",
+    "writer": [
+      { "name": "Name", "url": null }
+    ],
+    "director": [
+      { "name": "Name", "url": null }
+    ],
+    "cinematographer": [
+      { "name": "Name", "url": null }
+    ],
     "stage": "produced",
     "logline": "One-line logline about the story, written by [writer name].",
     "synopsis": [
@@ -74,8 +128,15 @@
     "section": "archive",
     "status": "produced",
     "year": 2023,
-    "writer": "Name",
-    "director": "Name",
+    "writer": [
+      { "name": "Name", "url": null }
+    ],
+    "director": [
+      { "name": "Name", "url": null }
+    ],
+    "cinematographer": [
+      { "name": "Name", "url": null }
+    ],
     "stage": "produced",
     "logline": "One-line logline about the story, written by [writer name].",
     "synopsis": [
