@@ -495,15 +495,11 @@ a.card, a.card-row {
 
 /* ---------- Contact page ---------- */
 
-.section--contact-info { text-align: center; padding-bottom: 32px; }
-
-.contact-row { display: flex; justify-content: center; margin-top: 12px; }
-
 .contact-email {
   font-family: var(--font-display);
-  font-size: 22px;
+  font-size: 18px;
   text-decoration: none;
-  border-bottom: 1.5px solid var(--ink);
+  border-bottom: 1.5px solid var(--green);
 }
 
 .contact-email:hover { color: var(--orange); border-color: var(--orange); }
@@ -531,19 +527,26 @@ a.card, a.card-row {
 .form-field textarea {
   font-family: var(--font-body);
   font-size: 14px;
-  padding: 10px 12px;
+  padding: 12px 14px;
   border: 1.5px solid var(--card-border);
-  border-radius: 3px;
+  border-radius: 4px;
   background: #fff;
   color: var(--ink);
+  box-shadow: var(--card-shadow);
+  transition: box-shadow 0.15s ease, transform 0.15s ease, border-color 0.15s ease;
 }
+
+.form-field input::placeholder,
+.form-field textarea::placeholder { color: rgba(30, 36, 38, 0.35); }
 
 .form-field textarea { min-height: 140px; resize: vertical; }
 
 .form-field input:focus,
 .form-field textarea:focus {
-  outline: 2px solid var(--orange);
-  outline-offset: 1px;
+  outline: none;
+  border-color: var(--orange);
+  box-shadow: 4px 4px 0 rgba(187, 93, 51, 0.2);
+  transform: translate(-1px, -1px);
 }
 
 .form-submit {
@@ -559,23 +562,29 @@ a.card, a.card-row {
   letter-spacing: 0.05em;
   text-transform: uppercase;
   cursor: pointer;
-  transition: opacity 0.15s ease;
+  box-shadow: var(--card-shadow);
+  transition: opacity 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-.form-submit:hover { opacity: 0.85; }
+.form-submit:hover {
+  opacity: 0.9;
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0 rgba(30, 36, 38, 0.15);
+}
 
 .form-success {
   display: none;
   max-width: 520px;
   margin: 0 auto 24px;
-  padding: 14px 18px;
+  padding: 16px 18px;
   border: 1.5px solid var(--green);
   border-radius: 4px;
   background: #fff;
-  color: var(--green);
-  font-weight: 600;
-  font-size: 14px;
 }
+
+.form-success p { margin: 0; font-size: 14px; color: var(--green); }
+.form-success p + p { margin-top: 6px; font-weight: 400; color: rgba(30, 36, 38, 0.7); }
+.form-success p:first-child { font-weight: 600; }
 
 #sent:target { display: block; }
 

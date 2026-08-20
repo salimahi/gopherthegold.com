@@ -332,17 +332,12 @@ ${header(false)}
   </div>
 </div>
 
-<section class="section section--contact-info">
+<section class="section">
   <div class="wrap">
-    <div class="contact-row">
-      <a class="contact-email" href="mailto:${esc(SITE.email)}">${esc(SITE.email)}</a>
+    <div id="sent" class="form-success">
+      <p>Thanks — your message is on its way. We&rsquo;ll get back to you soon.</p>
+      <p>Prefer email? Reach us directly at <a class="contact-email" href="mailto:${esc(SITE.email)}">${esc(SITE.email)}</a>.</p>
     </div>
-  </div>
-</section>
-
-<section class="section" style="padding-top:0">
-  <div class="wrap">
-    <div id="sent" class="form-success">Thanks — your message is on its way. We&rsquo;ll get back to you soon.</div>
     <form class="contact-form" action="https://formsubmit.co/${esc(SITE.email)}" method="POST">
       <input type="hidden" name="_subject" value="New message from ${esc(SITE.domain)}">
       <input type="hidden" name="_template" value="table">
@@ -351,15 +346,15 @@ ${header(false)}
       <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
       <div class="form-field">
         <label for="name">Name</label>
-        <input type="text" id="name" name="name" required>
+        <input type="text" id="name" name="name" placeholder="Jane Doe" required>
       </div>
       <div class="form-field">
         <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="email" name="email" placeholder="jane@email.com" required>
       </div>
       <div class="form-field">
         <label for="message">Message</label>
-        <textarea id="message" name="message" required></textarea>
+        <textarea id="message" name="message" placeholder="What&#39;s on your mind?" required></textarea>
       </div>
       <button class="form-submit" type="submit">Send message</button>
     </form>
