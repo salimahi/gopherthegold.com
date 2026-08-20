@@ -314,37 +314,6 @@ a.card, a.card-row {
 
 .promo-item:hover .promo-headline { opacity: 0.8; }
 
-/* ---------- About / Contact ---------- */
-
-.section--about .wrap,
-.section--contact .wrap {
-  max-width: 760px;
-}
-
-.section--about p {
-  font-size: 16px;
-  color: rgba(30, 36, 38, 0.85);
-}
-
-.section--contact {
-  background: var(--pink);
-}
-
-.contact-row {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 10px 24px;
-  margin-top: 16px;
-}
-
-.contact-email {
-  font-family: var(--font-display);
-  font-size: 22px;
-  text-decoration: none;
-  border-bottom: 1.5px solid var(--ink);
-}
-
 /* ---------- Footer ---------- */
 
 .site-footer {
@@ -470,22 +439,24 @@ a.card, a.card-row {
 
 .media-placeholder iframe { width: 100%; aspect-ratio: 16/9; border: 0; }
 
-/* ---------- Funding page ---------- */
+/* ---------- Page intro band (funding, contact) ---------- */
 
-.funding-intro {
+.page-intro {
   background: var(--cream);
   text-align: center;
   padding: 56px 0;
 }
 
-.funding-intro h1 { font-size: clamp(28px, 4vw, 40px); }
+.page-intro h1 { font-size: clamp(28px, 4vw, 40px); }
 
-.funding-intro p {
+.page-intro p {
   max-width: 50ch;
   margin: 12px auto 0;
   font-size: 15px;
   color: rgba(30, 36, 38, 0.75);
 }
+
+/* ---------- Funding page ---------- */
 
 .section-label { display: block; margin-bottom: 18px; }
 .section-label.seed { color: var(--orange); }
@@ -521,6 +492,92 @@ a.card, a.card-row {
   font-style: italic;
   padding: 8px 0;
 }
+
+/* ---------- Contact page ---------- */
+
+.section--contact-info { text-align: center; padding-bottom: 32px; }
+
+.contact-row { display: flex; justify-content: center; margin-top: 12px; }
+
+.contact-email {
+  font-family: var(--font-display);
+  font-size: 22px;
+  text-decoration: none;
+  border-bottom: 1.5px solid var(--ink);
+}
+
+.contact-email:hover { color: var(--orange); border-color: var(--orange); }
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.form-field { display: flex; flex-direction: column; gap: 6px; }
+
+.form-field label {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(30, 36, 38, 0.55);
+}
+
+.form-field input,
+.form-field textarea {
+  font-family: var(--font-body);
+  font-size: 14px;
+  padding: 10px 12px;
+  border: 1.5px solid var(--card-border);
+  border-radius: 3px;
+  background: #fff;
+  color: var(--ink);
+}
+
+.form-field textarea { min-height: 140px; resize: vertical; }
+
+.form-field input:focus,
+.form-field textarea:focus {
+  outline: 2px solid var(--orange);
+  outline-offset: 1px;
+}
+
+.form-submit {
+  align-self: flex-start;
+  background: var(--orange);
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 12px 28px;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+
+.form-submit:hover { opacity: 0.85; }
+
+.form-success {
+  display: none;
+  max-width: 520px;
+  margin: 0 auto 24px;
+  padding: 14px 18px;
+  border: 1.5px solid var(--green);
+  border-radius: 4px;
+  background: #fff;
+  color: var(--green);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+#sent:target { display: block; }
 
 /* ---------- Mobile nav ---------- */
 

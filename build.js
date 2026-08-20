@@ -17,6 +17,7 @@ const ROOT = __dirname;
 const SITE = {
   name: 'Gopher the Gold Productions',
   email: 'contact@gopherthegold.com',
+  domain: 'gopherthegold.com',
   year: 2026,
   write7in7Url: 'https://write7in7.com',
 };
@@ -285,7 +286,7 @@ function buildFundingPage() {
   )}
 ${header(false)}
 
-<div class="funding-intro">
+<div class="page-intro">
   <div class="wrap">
     <h1>Projects we&rsquo;re funding</h1>
     <p>Cool stuff by people we dig.</p>
@@ -314,10 +315,66 @@ ${footer(false)}`;
   fs.writeFileSync(path.join(ROOT, 'funding.html'), html);
 }
 
+// ---------- contact page ----------
+
+function buildContactPage() {
+  const html = `${head(
+    `Contact — ${SITE.name}`,
+    `Get in touch with ${SITE.name}.`,
+    false
+  )}
+${header(false)}
+
+<div class="page-intro">
+  <div class="wrap">
+    <h1>Say hello</h1>
+    <p>Got a project, a question, or just want to say hi? Send us a note and we&rsquo;ll get back to you.</p>
+  </div>
+</div>
+
+<section class="section section--contact-info">
+  <div class="wrap">
+    <div class="contact-row">
+      <a class="contact-email" href="mailto:${esc(SITE.email)}">${esc(SITE.email)}</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div id="sent" class="form-success">Thanks — your message is on its way. We&rsquo;ll get back to you soon.</div>
+    <form class="contact-form" action="https://formsubmit.co/${esc(SITE.email)}" method="POST">
+      <input type="hidden" name="_subject" value="New message from ${esc(SITE.domain)}">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://${esc(SITE.domain)}/contact.html#sent">
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+      <div class="form-field">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+      <button class="form-submit" type="submit">Send message</button>
+    </form>
+  </div>
+</section>
+
+${footer(false)}`;
+  fs.writeFileSync(path.join(ROOT, 'contact.html'), html);
+}
+
 // ---------- run ----------
 
 buildHomepage();
 buildFundingPage();
+buildContactPage();
 scripts.forEach(buildScriptPage);
 
-console.log(`Built index.html, funding.html, and ${scripts.length} script page(s).`);
+console.log(`Built index.html, funding.html, contact.html, and ${scripts.length} script page(s).`);
