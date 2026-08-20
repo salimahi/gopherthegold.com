@@ -234,7 +234,7 @@ a.card, a.card-row {
 }
 
 .thumb {
-  aspect-ratio: 6 / 4;
+  aspect-ratio: 2 / 3;
   background: repeating-linear-gradient(135deg, rgba(30,36,38,.06) 0 8px, rgba(30,36,38,.02) 8px 16px);
   border: 1.5px dashed rgba(30, 36, 38, 0.35);
   border-radius: 3px;
@@ -393,15 +393,16 @@ a.card, a.card-row {
 }
 
 .poster {
-  aspect-ratio: 6 / 4;
+  aspect-ratio: 2 / 3;
   width: 100%;
+  max-width: 320px;
   background: repeating-linear-gradient(135deg, rgba(30,36,38,.06) 0 10px, rgba(30,36,38,.02) 10px 20px);
   border: 1.5px dashed rgba(30, 36, 38, 0.35);
   border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 36px;
+  margin: 0 0 36px;
   overflow: hidden;
 }
 
