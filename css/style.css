@@ -1,16 +1,14 @@
 /* Gopher the Gold Productions — site stylesheet
    Design tokens sourced from the wireframe handoff brand guide. */
 
-@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@400;500&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@400;500&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
 
 :root {
   --cream: #ECDABE;
   --gold: #8D6837;
-  --gold-bright: #BF833C;
   --pink: #CF9181;
   --orange: #BB5D33;
   --green: #314939;
-  --green-light: #4a6a54;
   --ink: #1E2426;
 
   --page-bg: #FAF6EE;
@@ -113,8 +111,7 @@ h1, h2, h3 {
 }
 
 .main-nav a:hover,
-.main-nav a:focus-visible,
-.main-nav a[aria-current="page"] {
+.main-nav a:focus-visible {
   color: #fff;
   border-bottom-color: var(--orange);
 }
@@ -590,75 +587,6 @@ a.card, a.card-row {
 .form-success p:first-child { font-weight: 600; }
 
 #sent:target { display: block; }
-
-/* ---------- About page ---------- */
-
-.about-eyebrow {
-  font-weight: 800;
-  font-size: 14px;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--gold-bright);
-}
-
-.about-rule { width: 90px; height: 5px; background: var(--gold); }
-
-.about-hero { background: var(--ink); padding: 120px 48px 140px; display: flex; justify-content: center; }
-.about-hero-inner { max-width: 1080px; width: 100%; display: grid; grid-template-columns: 280px 1fr; gap: 72px; align-items: center; }
-.about-hero-inner > img { width: 100%; height: auto; }
-.about-hero h1 { font-size: 76px; line-height: 1.05; color: var(--cream); margin: 22px 0 0; }
-.about-hero .about-rule { margin-top: 44px; }
-.about-hero p { font-weight: 500; font-size: 24px; line-height: 1.55; color: var(--cream); opacity: 0.9; margin: 32px 0 0; max-width: 640px; }
-
-.about-way { padding: 110px 48px; display: flex; justify-content: center; }
-.about-way-inner { max-width: 1080px; width: 100%; display: grid; grid-template-columns: 1fr 1.4fr; gap: 64px; align-items: start; }
-.about-way-label { font-weight: 800; font-size: 15px; letter-spacing: 0.16em; text-transform: uppercase; margin-top: 10px; }
-.about-way-num { font-family: var(--font-display); font-weight: 500; font-size: 150px; line-height: 0.9; }
-.about-way h2 { font-size: 56px; line-height: 1.1; color: var(--cream); margin: 0; }
-.about-way p { font-weight: 500; font-size: 23px; line-height: 1.55; color: var(--cream); opacity: 0.95; margin: 30px 0 0; }
-.about-way p.emphasis { font-weight: 600; color: var(--ink); opacity: 1; margin-top: 20px; }
-.about-actions { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 38px; }
-
-.about-btn { text-decoration: none; font-weight: 700; font-size: 16px; letter-spacing: 0.1em; text-transform: uppercase; padding: 18px 32px; display: inline-block; }
-.about-btn-dark { background: var(--ink); color: var(--cream); }
-.about-btn-dark:hover { background: var(--cream); color: var(--ink); }
-.about-btn-cream { background: var(--cream); color: var(--ink); }
-.about-btn-cream:hover { background: var(--gold-bright); color: var(--ink); }
-.about-btn-outline { border: 2px solid var(--ink); color: var(--ink); padding: 16px 32px; }
-.about-btn-outline:hover { background: var(--ink); color: var(--cream); }
-.about-btn-dark-alt { background: var(--ink); color: var(--cream); }
-.about-btn-dark-alt:hover { background: var(--orange); color: var(--cream); }
-
-.about-way-one { background: var(--gold); }
-.about-way-one .about-way-label { color: var(--ink); }
-.about-way-one .about-way-num { color: var(--gold-bright); }
-.about-way-two { background: var(--green); }
-.about-way-two .about-way-label { color: var(--gold-bright); }
-.about-way-two .about-way-num { color: var(--green-light); }
-.about-way-three { background: var(--orange); }
-.about-way-three .about-way-label { color: var(--ink); }
-.about-way-three .about-way-num { color: var(--gold); }
-
-.about-closing { background: var(--cream); padding: 130px 48px; display: flex; flex-direction: column; align-items: center; text-align: center; }
-.about-closing img { width: 220px; height: auto; }
-.about-closing h2 { font-size: 60px; line-height: 1.15; color: var(--ink); max-width: 820px; margin: 48px 0 0; }
-.about-closing .about-rule { margin: 44px 0; }
-.about-closing .about-actions { margin-top: 0; justify-content: center; }
-
-@media (max-width: 900px) {
-  .about-hero { padding: 72px 24px 88px; }
-  .about-hero-inner { grid-template-columns: 1fr; gap: 40px; }
-  .about-hero-inner > img { width: 180px; }
-  .about-hero h1 { font-size: 44px; }
-  .about-hero p { font-size: 20px; }
-  .about-way { padding: 72px 24px; }
-  .about-way-inner { grid-template-columns: 1fr; gap: 24px; }
-  .about-way-num { font-size: 96px; }
-  .about-way h2 { font-size: 36px; }
-  .about-way p { font-size: 19px; }
-  .about-closing { padding: 80px 24px; }
-  .about-closing h2 { font-size: 38px; }
-}
 
 /* ---------- Mobile nav ---------- */
 
