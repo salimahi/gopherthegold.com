@@ -24,13 +24,28 @@
   a { color: var(--bronze); }
   a:hover { color: var(--rust); }
 
-  .site-header { background: var(--ink); padding: 20px 48px; display: flex; align-items: center; justify-content: space-between; gap: 32px; position: sticky; top: 0; z-index: 20; }
-  .brand { display: flex; align-items: center; gap: 16px; text-decoration: none; }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+  .site-header { background: var(--ink); color: #fff; position: sticky; top: 0; z-index: 40; }
+  .site-header .wrap { display: flex; align-items: center; justify-content: space-between; padding-top: 14px; padding-bottom: 14px; gap: 16px; }
+  .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
   .brand img { height: 52px; width: auto; }
-  .site-nav { display: flex; align-items: center; gap: 34px; }
-  .site-nav a { font-weight: 700; font-size: 14px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--cream); text-decoration: none; }
-  .site-nav a:hover { color: var(--gold); }
-  .site-nav a[aria-current="page"] { color: var(--gold); border-bottom: 2px solid var(--gold); padding-bottom: 2px; }
+  .main-nav { display: flex; align-items: center; gap: 22px; list-style: none; margin: 0; padding: 0; font-weight: 600; font-size: 13px; letter-spacing: 0.03em; text-transform: uppercase; }
+  .main-nav a { text-decoration: none; color: var(--cream); padding-bottom: 2px; border-bottom: 1.5px solid transparent; transition: border-color 0.15s ease, color 0.15s ease; }
+  .main-nav a:hover, .main-nav a:focus-visible { color: #fff; border-bottom-color: var(--rust); }
+  .nav-toggle { display: none; background: none; border: 1.5px solid var(--cream); border-radius: 6px; color: var(--cream); padding: 6px 10px; font-weight: 600; font-size: 13px; cursor: pointer; }
+
+  @media (max-width: 700px) {
+    .nav-toggle { display: inline-flex; }
+    .main-nav {
+      position: absolute; top: 100%; left: 0; right: 0;
+      background: var(--ink); flex-direction: column; align-items: flex-start; gap: 0;
+      padding: 0 20px; max-height: 0; overflow: hidden; transition: max-height 0.2s ease;
+    }
+    .main-nav.open { max-height: 320px; padding: 8px 20px 16px; }
+    .main-nav li { width: 100%; }
+    .main-nav a { display: block; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  }
 
   .hero { background: var(--ink); padding: 120px 48px 140px; display: flex; justify-content: center; }
   .hero-inner { max-width: 1080px; width: 100%; display: grid; grid-template-columns: 280px 1fr; gap: 72px; align-items: center; }
@@ -83,8 +98,6 @@
   .site-footer .copyright { opacity: 0.6; }
 
   @media (max-width: 900px) {
-    .site-header { flex-direction: column; align-items: flex-start; gap: 16px; padding: 20px 24px; }
-    .site-nav { flex-wrap: wrap; gap: 20px; }
     .hero { padding: 72px 24px 88px; }
     .hero-inner { grid-template-columns: 1fr; gap: 40px; }
     .hero-inner > img { width: 180px; }
@@ -104,16 +117,21 @@
 <body>
 
 <header class="site-header">
-  <a class="brand" href="/index.html">
-    <img src="/assets/logo-header.svg" alt="Gopher the Gold Productions">
-  </a>
-  <nav class="site-nav">
-    <a href="/about.html" aria-current="page">About</a>
-    <a href="/index.html#writers-room">Watch</a>
-    <a href="https://write7in7.com">Compete</a>
-    <a href="/funding.html">Fund</a>
-    <a href="/contact.html">Contact</a>
-  </nav>
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Gopher the Gold Productions home">
+      <img src="assets/logo-header.svg" alt="Gopher the Gold Productions">
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menu</button>
+    <nav aria-label="Primary">
+      <ul class="main-nav" id="main-nav">
+        <li><a href="about.html">About</a></li>
+        <li><a href="index.html#writers-room">Watch</a></li>
+        <li><a href="https://write7in7.com" target="_blank" rel="noopener">Compete</a></li>
+        <li><a href="funding.html">Fund</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
 <section class="hero">
@@ -195,5 +213,6 @@
   <span class="copyright">&copy; 2026 Gopher the Gold Productions. All rights reserved.</span>
 </footer>
 
+<script src="js/main.js"></script>
 </body>
 </html>
