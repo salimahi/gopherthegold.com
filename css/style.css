@@ -86,7 +86,7 @@ h1, h2, h3 {
   gap: 10px;
 }
 
-.brand img { height: 56px; width: auto; }
+.brand img { height: 76px; width: auto; }
 
 .main-nav {
   display: flex;
@@ -115,6 +115,15 @@ h1, h2, h3 {
   color: #fff;
   border-bottom-color: var(--orange);
 }
+
+.main-nav a.nav-icon {
+  display: inline-flex;
+  align-items: center;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.main-nav a.nav-icon svg { width: 20px; height: 20px; }
 
 .nav-toggle {
   display: none;

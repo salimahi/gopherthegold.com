@@ -20,7 +20,14 @@ const SITE = {
   domain: 'gopherthegold.com',
   year: 2026,
   write7in7Url: 'https://write7in7.com',
+  instagramUrl: 'https://www.instagram.com/gopherthegoldproductions',
 };
+
+const instagramIcon = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+        <circle cx="12" cy="12" r="4.2"></circle>
+        <circle cx="17.4" cy="6.6" r="0.9" fill="currentColor" stroke="none"></circle>
+      </svg>`;
 
 // Toggle the "completed projects" section on the funding page. Flip back to
 // true once there's a first finished project to show — content stays in
@@ -89,6 +96,7 @@ function header(depth) {
         <li><a${externalLinkAttrs(SITE.write7in7Url)}>Compete</a></li>
         <li><a href="${prefix}funding.html">Fund</a></li>
         <li><a href="${prefix}contact.html">Contact</a></li>
+        <li><a class="nav-icon" href="${SITE.instagramUrl}" target="_blank" rel="noopener" aria-label="${esc(SITE.name)} on Instagram">${instagramIcon}</a></li>
       </ul>
     </nav>
   </div>
