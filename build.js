@@ -373,15 +373,99 @@ ${footer(false)}`;
   fs.writeFileSync(path.join(ROOT, 'contact.html'), html);
 }
 
+// ---------- about page ----------
+
+function buildAboutPage() {
+  const html = `${head(
+    `About — ${SITE.name}`,
+    "Gopher the Gold Productions gives people more chances to create: a monthly writing competition, original scripts in production, and funding for projects we dig.",
+    false
+  )}
+${header(false)}
+
+<section class="about-hero">
+  <div class="wrap about-hero-inner">
+    <img src="assets/logo-white.svg" alt="">
+    <div>
+      <div class="about-label">About us</div>
+      <h1>We dig creating, whatever the form.</h1>
+      <div class="about-rule"></div>
+      <p>You can&#39;t compete with having fun.<br><br>Entertaining and collaborative projects are the name of the game. But we still dig deep to hit gold.&nbsp;</p>
+    </div>
+  </div>
+</section>
+
+<section class="about-way about-way-one">
+  <div class="wrap about-way-inner">
+    <div>
+      <div class="about-label">Way one</div>
+      <div class="about-way-num">01</div>
+    </div>
+    <div>
+      <h2>We run the Write 7 in 7 Competition</h2>
+      <p>A monthly scriptwriting sprint: 7 days to write 7 pages. Every entry gets feedback from a skilled writer, and the top three scripts win cash prizes.</p>
+      <p class="emphasis">The winning script gets produced as a podcast table read.</p>
+      <div class="about-actions">
+        <a class="about-btn about-btn-dark"${externalLinkAttrs(SITE.write7in7Url)}>Start writing already &#8599;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about-way about-way-two">
+  <div class="wrap about-way-inner">
+    <div>
+      <div class="about-label">Way two</div>
+      <div class="about-way-num">02</div>
+    </div>
+    <div>
+      <h2>We produce our own scripts</h2>
+      <p>They are a fun and collaborative, built to entertain!&nbsp;</p>
+      <div class="about-actions">
+        <a class="about-btn about-btn-cream" href="index.html#writers-room">See The Studio &#8594;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about-way about-way-three">
+  <div class="wrap about-way-inner">
+    <div>
+      <div class="about-label">Way three</div>
+      <div class="about-way-num">03</div>
+    </div>
+    <div>
+      <h2>We fund projects that look cool</h2>
+      <p>We love to get our paws on projects that we dig. If you&#39;ve got something cool in motion and it needs a push, tell us about it.</p>
+      <div class="about-actions">
+        <a class="about-btn about-btn-dark" href="funding.html">Got something cool? Gopher it! &#8599;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about-closing">
+  <div class="wrap">
+    <img src="assets/logo-hero.svg" alt="${esc(SITE.name)}">
+    <h2>Three tunnels. One goal: create gold.</h2>
+    <div class="about-rule"></div>
+    <div class="about-actions">
+      <a class="about-btn about-btn-dark-alt" href="contact.html">Get in touch</a>
+      <a class="about-btn about-btn-outline" href="${SITE.instagramUrl}" target="_blank" rel="noopener">Follow @gopherthegoldproductions &#8599;</a>
+    </div>
+  </div>
+</section>
+
+${footer(false)}`;
+  fs.writeFileSync(path.join(ROOT, 'about.html'), html);
+}
+
 // ---------- run ----------
-// Note: about.html is NOT generated here. Per the design handoff, it ships
-// as its own self-contained static file (own header/footer/styles) — see
-// about.html directly. Only its one approved copy edit should ever be
-// touched by hand; everything else stays byte-faithful to the handoff.
 
 buildHomepage();
 buildFundingPage();
 buildContactPage();
+buildAboutPage();
 scripts.forEach(buildScriptPage);
 
-console.log(`Built index.html, funding.html, contact.html, and ${scripts.length} script page(s).`);
+console.log(`Built index.html, funding.html, contact.html, about.html, and ${scripts.length} script page(s).`);

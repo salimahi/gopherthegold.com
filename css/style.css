@@ -597,6 +597,82 @@ a.card, a.card-row {
 
 #sent:target { display: block; }
 
+/* ---------- About page ---------- */
+
+.about-label {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.about-rule { width: 90px; height: 5px; background: var(--gold); }
+
+.about-hero { background: var(--ink); padding: 96px 0; }
+.about-hero-inner { display: grid; grid-template-columns: 280px 1fr; gap: 72px; align-items: center; }
+.about-hero-inner > img { width: 100%; height: auto; }
+.about-hero .about-label { color: var(--orange); }
+.about-hero h1 { font-size: clamp(32px, 5vw, 64px); line-height: 1.1; color: var(--cream); margin: 18px 0 0; }
+.about-hero .about-rule { margin-top: 36px; }
+.about-hero p { font-size: 17px; line-height: 1.6; color: var(--cream); opacity: 0.85; margin: 28px 0 0; max-width: 560px; }
+
+.about-way { padding: 80px 0; }
+.about-way-inner { display: grid; grid-template-columns: 1fr 1.4fr; gap: 48px; align-items: start; }
+.about-way-num { font-family: var(--font-display); font-size: 120px; line-height: 0.9; margin-top: 8px; }
+.about-way h2 { font-size: clamp(26px, 3.4vw, 40px); line-height: 1.15; color: var(--cream); }
+.about-way p { font-size: 16px; line-height: 1.6; color: var(--cream); opacity: 0.9; margin: 20px 0 0; }
+.about-way p.emphasis { font-weight: 600; color: var(--ink); opacity: 1; margin-top: 16px; }
+.about-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 28px; }
+
+.about-btn {
+  text-decoration: none;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 14px 26px;
+  border-radius: 3px;
+  display: inline-block;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.about-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0 rgba(30, 36, 38, 0.15);
+}
+
+.about-btn-dark { background: var(--ink); color: var(--cream); }
+.about-btn-cream { background: var(--cream); color: var(--ink); }
+.about-btn-outline { background: transparent; border: 1.5px solid var(--ink); color: var(--ink); padding: 12.5px 26px; }
+.about-btn-dark-alt { background: var(--ink); color: var(--cream); }
+
+.about-way-one { background: var(--gold); }
+.about-way-one .about-label { color: var(--ink); }
+.about-way-one .about-way-num { color: rgba(30, 36, 38, 0.25); }
+.about-way-two { background: var(--green); }
+.about-way-two .about-label { color: var(--orange); }
+.about-way-two .about-way-num { color: rgba(255, 255, 255, 0.25); }
+.about-way-three { background: var(--orange); }
+.about-way-three .about-label { color: var(--ink); }
+.about-way-three .about-way-num { color: rgba(30, 36, 38, 0.25); }
+
+.about-closing { background: var(--cream); padding: 96px 0; text-align: center; }
+.about-closing .wrap { display: flex; flex-direction: column; align-items: center; }
+.about-closing img { width: 180px; height: auto; }
+.about-closing h2 { font-size: clamp(28px, 4vw, 44px); line-height: 1.2; color: var(--ink); max-width: 780px; margin: 36px 0 0; }
+.about-closing .about-rule { margin: 36px 0; }
+.about-closing .about-actions { justify-content: center; }
+
+@media (max-width: 700px) {
+  .about-hero-inner { grid-template-columns: 1fr; gap: 32px; }
+  .about-hero-inner > img { width: 160px; }
+  .about-way-inner { grid-template-columns: 1fr; gap: 20px; }
+  .about-way-num { font-size: 80px; }
+}
+
 /* ---------- Mobile nav ---------- */
 
 @media (max-width: 700px) {
