@@ -483,6 +483,10 @@ a.card, a.card-row {
 
 .campaign-list { display: flex; flex-direction: column; gap: 14px; }
 
+.funding-cta { text-align: center; }
+.funding-cta h2 { font-size: clamp(24px, 3.4vw, 34px); color: var(--ink); }
+.funding-cta .about-actions { justify-content: center; margin-top: 24px; }
+
 .card-row {
   display: flex;
   align-items: center;
