@@ -320,6 +320,15 @@ ${SHOW_COMPLETED ? `<section class="section section--archive">
   </div>
 </section>` : ''}
 
+<section class="section funding-cta">
+  <div class="wrap">
+    <h2>Got something cool you want us to gopher?</h2>
+    <div class="about-actions">
+      <a class="about-btn about-btn-dark" href="contact.html">Contact us &#8594;</a>
+    </div>
+  </div>
+</section>
+
 ${footer(false)}`;
   fs.writeFileSync(path.join(ROOT, 'funding.html'), html);
 }
