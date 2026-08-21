@@ -181,6 +181,16 @@ h1, h2, h3 {
   max-width: 34ch;
 }
 
+.hero-link {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--orange);
+  text-decoration: none;
+  width: fit-content;
+}
+
+.hero-link:hover { text-decoration: underline; }
+
 /* ---------- Sections ---------- */
 
 .section {

@@ -150,6 +150,7 @@ ${header(false)}
   <div class="hero-copy">
     <h1>Gopher creativity.</h1>
     <p class="tagline">Whatever form, we dig it.</p>
+    <a class="hero-link" href="about.html">Learn more &#8594;</a>
   </div>
 </section>
 
@@ -390,7 +391,7 @@ ${header(false)}
       <div class="about-label">About us</div>
       <h1>We dig creating, whatever the form.</h1>
       <div class="about-rule"></div>
-      <p>You can&#39;t compete with having fun.<br><br>Entertaining and collaborative projects are the name of the game. But we still dig deep to hit gold.&nbsp;</p>
+      <p>You can&#39;t compete with having fun.<br><br>Entertaining and collaborative projects are the name of the game. But we still dig deep to hit gold.&nbsp;<br><br>Scroll down to learn the ways we make this happen.</p>
     </div>
   </div>
 </section>
