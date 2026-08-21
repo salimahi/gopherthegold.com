@@ -79,7 +79,7 @@ function header(depth) {
   return `<header class="site-header">
   <div class="wrap">
     <a class="brand" href="${prefix}index.html" aria-label="${esc(SITE.name)} home">
-      <img src="${prefix}assets/logo-header.svg" alt="${esc(SITE.name)}">
+      <img src="${prefix}assets/logo-icon.svg" alt="${esc(SITE.name)}">
     </a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menu</button>
     <nav aria-label="Primary">
