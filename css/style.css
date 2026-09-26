@@ -501,6 +501,7 @@ a.card, a.card-row {
 .card-row .thumb { width: 84px; height: 84px; flex: none; aspect-ratio: auto; }
 .card-row .row-body { flex: 1; display: flex; flex-direction: column; gap: 4px; }
 .card-row .card-title { font-size: 15px; }
+.card-row .campaign-status { color: var(--green); }
 
 .status-pill {
   margin: 0;
