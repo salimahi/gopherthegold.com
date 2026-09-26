@@ -76,6 +76,30 @@
     "scriptUrl": null
   },
   {
+    "slug": "matched",
+    "title": "Matched",
+    "section": "writers-room",
+    "status": "pre-production",
+    "year": null,
+    "writer": [
+      { "name": "Salimah Ismail", "url": "https://www.imdb.com/name/nm18761247/?ref_=fn_t_1" }
+    ],
+    "director": [
+      { "name": "TBD", "url": null }
+    ],
+    "cinematographer": [
+      { "name": "R Jay Molina", "url": "https://www.imdb.com/name/nm4454777/?ref_=nv_sr_srsg_0_tt_0_nm_8_in_0_q_r%20jay%20molina" }
+    ],
+    "stage": "pre-production",
+    "logline": "There's a match for everyone.",
+    "synopsis": [
+      "A woman turns to an elite matchmaker and discovers true compatibility."
+    ],
+    "poster": "assets/poster/Coming-Soon-Pink.png",
+    "embedUrl": null,
+    "scriptUrl": null
+  },
+  {
     "slug": "title-c",
     "title": "Title C",
     "section": "archive",
