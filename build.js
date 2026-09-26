@@ -270,6 +270,7 @@ function campaignRow(p) {
       <div class="row-body">
         <div class="card-title">${esc(p.name)}</div>
         <div class="eyebrow">${esc(p.type)}</div>
+        ${p.status ? `<div class="eyebrow campaign-status">${esc(p.status)}</div>` : ''}
         ${p.logline ? `<p class="status-pill">${esc(p.logline)}</p>` : ''}
         <div class="card-link">${linkLabel(p.url, 'view campaign')}</div>
       </div>`;
@@ -304,7 +305,7 @@ ${header(false)}
 
 <section class="section">
   <div class="wrap">
-    <span class="eyebrow section-label seed">active campaigns</span>
+    <span class="eyebrow section-label seed">in production</span>
     <div class="campaign-list">
       ${funded.active.length ? funded.active.map(campaignRow).join('\n      ') : '<p class="empty-note">No active campaigns right now — check back soon.</p>'}
     </div>
