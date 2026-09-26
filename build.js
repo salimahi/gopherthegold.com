@@ -121,7 +121,7 @@ function footer(depth) {
 function scriptCard(s) {
   return `<a class="card" href="scripts/${esc(s.slug)}.html">
   ${thumb(s.poster, 'media placeholder')}
-  <div class="card-title">&ldquo;${esc(s.title)}&rdquo;</div>
+  <div class="card-title">${esc(s.title)}</div>
   <div class="eyebrow card-status">status: ${esc(s.status)}</div>
   <div class="card-link">learn more →</div>
 </a>`;
@@ -130,7 +130,7 @@ function scriptCard(s) {
 function archiveItem(s) {
   return `<a class="archive-item" href="scripts/${esc(s.slug)}.html">
   ${thumb(s.poster, 'media placeholder')}
-  <div class="card-title">&ldquo;${esc(s.title)}&rdquo;${s.year ? ` · ${s.year}` : ''}</div>
+  <div class="card-title">${esc(s.title)}${s.year ? ` · ${s.year}` : ''}</div>
   <div class="card-link">learn more →</div>
 </a>`;
 }
@@ -235,7 +235,7 @@ ${header(true)}
     <div class="detail-info">
       <div class="detail-head">
         <div class="eyebrow status">status: ${esc(s.status)}</div>
-        <h1>&ldquo;${esc(s.title)}&rdquo;</h1>
+        <h1>${esc(s.title)}</h1>
         ${s.logline ? `<p class="logline">${esc(s.logline)}</p>` : ''}
       </div>
       <div class="credits">
