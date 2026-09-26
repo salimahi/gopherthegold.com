@@ -274,9 +274,10 @@ function campaignRow(p) {
         ${p.logline ? `<p class="status-pill">${esc(p.logline)}</p>` : ''}
         <div class="card-link">${linkLabel(p.url, 'view campaign')}</div>
       </div>`;
+  const cls = p.status ? 'card-row card-row--greenlit' : 'card-row';
   return p.url
-    ? `<a class="card-row" href="${esc(p.url)}" target="_blank" rel="noopener">\n      ${inner}\n    </a>`
-    : `<div class="card-row">\n      ${inner}\n    </div>`;
+    ? `<a class="${cls}" href="${esc(p.url)}" target="_blank" rel="noopener">\n      ${inner}\n    </a>`
+    : `<div class="${cls}">\n      ${inner}\n    </div>`;
 }
 
 function completedCard(p) {
