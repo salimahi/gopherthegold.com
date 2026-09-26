@@ -217,7 +217,7 @@ function creditRow(label, valueHtml) {
 
 function buildScriptPage(s) {
   const mediaBlock = s.embedUrl
-    ? `<div class="media-placeholder"><iframe src="${esc(s.embedUrl)}" allowfullscreen title="${esc(s.title)}"></iframe></div>`
+    ? `<div class="media-placeholder"><iframe src="${esc(s.embedUrl)}" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="${esc(s.title)}"></iframe></div>`
     : s.scriptUrl
       ? `<div class="media-placeholder"><a class="card-link" href="${esc(s.scriptUrl)}" target="_blank" rel="noopener">read the script →</a></div>`
       : `<div class="media-placeholder"><span class="eyebrow">coming soon</span></div>`;
@@ -253,7 +253,7 @@ ${header(true)}
   </div>
 
   <div class="media-block">
-    <div class="eyebrow">script / film</div>
+    <div class="eyebrow">${esc(s.mediaLabel || 'script / film')}</div>
     ${mediaBlock}
   </div>
 </div>

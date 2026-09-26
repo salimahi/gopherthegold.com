@@ -457,6 +457,7 @@ a.card, a.card-row {
 }
 
 .media-placeholder iframe { width: 100%; aspect-ratio: 16/9; border: 0; }
+.media-placeholder:has(iframe) { border: 0; min-height: 0; }
 
 /* ---------- Page intro band (funding, contact) ---------- */
 
