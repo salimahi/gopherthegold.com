@@ -64,6 +64,30 @@
     <div class="eyebrow">trailer</div>
     <div class="media-placeholder"><iframe src="https://player.vimeo.com/video/1230289683?h=21d533933a" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="This Again"></iframe></div>
   </div>
+
+  <div class="media-block">
+    <div class="eyebrow">film stills</div>
+    <div class="carousel" id="stills-carousel">
+      <div class="carousel-track">
+        <div class="carousel-slide"><img src="../assets/this-again/stills/Copy%20of%20TA_002.jpg" alt="This Again film still"></div>
+        <div class="carousel-slide"><img src="../assets/this-again/stills/Copy%20of%20TA_004.jpg" alt="This Again film still"></div>
+        <div class="carousel-slide"><img src="../assets/this-again/stills/Copy%20of%20TA_005.jpg" alt="This Again film still"></div>
+        <div class="carousel-slide"><img src="../assets/this-again/stills/Copy%20of%20TA_006.jpg" alt="This Again film still"></div>
+        <div class="carousel-slide"><img src="../assets/this-again/stills/Copy%20of%20TA_007.jpg" alt="This Again film still"></div>
+      </div>
+      <button class="carousel-btn carousel-prev" type="button" aria-label="Previous still">&larr;</button>
+      <button class="carousel-btn carousel-next" type="button" aria-label="Next still">&rarr;</button>
+    </div>
+  </div>
+
+  <div class="media-block">
+    <div class="eyebrow">behind the scenes</div>
+    <div class="bts-grid">
+      <img src="../assets/this-again/bts/Copy%20of%2020260812_220648.jpg" alt="This Again behind the scenes">
+      <img src="../assets/this-again/bts/Copy%20of%2020260815_153557.jpg" alt="This Again behind the scenes">
+      <img src="../assets/this-again/bts/Copy%20of%20IMG_6918.JPG" alt="This Again behind the scenes">
+    </div>
+  </div>
 </div>
 
 <footer class="site-footer">
@@ -73,5 +97,27 @@
   </div>
 </footer>
 <script src="../js/main.js"></script>
+<script>
+(function () {
+  var carousel = document.getElementById('stills-carousel');
+  if (!carousel) return;
+  var track = carousel.querySelector('.carousel-track');
+  var slides = carousel.querySelectorAll('.carousel-slide');
+  var index = 0;
+
+  function update() {
+    track.style.transform = 'translateX(' + (-index * 100) + '%)';
+  }
+
+  carousel.querySelector('.carousel-prev').addEventListener('click', function () {
+    index = (index - 1 + slides.length) % slides.length;
+    update();
+  });
+  carousel.querySelector('.carousel-next').addEventListener('click', function () {
+    index = (index + 1) % slides.length;
+    update();
+  });
+})();
+</script>
 </body>
 </html>
