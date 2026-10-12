@@ -63,6 +63,25 @@
     <div class="eyebrow">trailer</div>
     <div class="media-placeholder"><iframe src="https://drive.google.com/file/d/1aG4394G7WkWgRCgTNYpRSKI2caVgs8fi/preview" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Captcha"></iframe></div>
   </div>
+
+  <div class="media-block">
+    <div class="eyebrow">film stills</div>
+    <div class="carousel" id="stills-carousel" data-per-view="3">
+      <div class="carousel-track">
+        <div class="carousel-slide"><img src="../assets/captcha/stills/still-1.jpg" alt="Captcha film still"></div>
+        <div class="carousel-slide"><img src="../assets/captcha/stills/still-2.jpg" alt="Captcha film still"></div>
+        <div class="carousel-slide"><img src="../assets/captcha/stills/still-3.jpg" alt="Captcha film still"></div>
+        <div class="carousel-slide"><img src="../assets/captcha/stills/still-4.jpg" alt="Captcha film still"></div>
+        <div class="carousel-slide"><img src="../assets/captcha/stills/still-5.jpg" alt="Captcha film still"></div>
+        <div class="carousel-slide"><img src="../assets/captcha/stills/still-6.jpg" alt="Captcha film still"></div>
+        <div class="carousel-slide"><img src="../assets/captcha/stills/still-7.jpg" alt="Captcha film still"></div>
+        <div class="carousel-slide"><img src="../assets/captcha/stills/still-8.jpg" alt="Captcha film still"></div>
+        <div class="carousel-slide"><img src="../assets/captcha/stills/still-9.jpg" alt="Captcha film still"></div>
+      </div>
+      <button class="carousel-btn carousel-prev" type="button" aria-label="Previous still">&larr;</button>
+      <button class="carousel-btn carousel-next" type="button" aria-label="Next still">&rarr;</button>
+    </div>
+  </div>
 </div>
 
 <footer class="site-footer">
@@ -72,5 +91,35 @@
   </div>
 </footer>
 <script src="../js/main.js"></script>
+<script>
+(function () {
+  document.querySelectorAll('.carousel').forEach(function (carousel) {
+    var track = carousel.querySelector('.carousel-track');
+    var slides = carousel.querySelectorAll('.carousel-slide');
+    var perView = parseInt(carousel.dataset.perView, 10) || 1;
+    perView = Math.min(perView, slides.length);
+    var maxIndex = Math.max(slides.length - perView, 0);
+    var index = 0;
+
+    track.style.width = (slides.length / perView * 100) + '%';
+    slides.forEach(function (slide) {
+      slide.style.flexBasis = (100 / slides.length) + '%';
+    });
+
+    function update() {
+      track.style.transform = 'translateX(' + (-index * (100 / slides.length)) + '%)';
+    }
+
+    carousel.querySelector('.carousel-prev').addEventListener('click', function () {
+      index = index <= 0 ? maxIndex : index - 1;
+      update();
+    });
+    carousel.querySelector('.carousel-next').addEventListener('click', function () {
+      index = index >= maxIndex ? 0 : index + 1;
+      update();
+    });
+  });
+})();
+</script>
 </body>
 </html>
