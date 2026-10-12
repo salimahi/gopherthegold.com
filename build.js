@@ -207,7 +207,9 @@ function personHtml(p) {
 
 function peopleHtml(people) {
   if (!people) return '';
-  return (Array.isArray(people) ? people : [people]).map(personHtml).join(' &amp; ');
+  const list = (Array.isArray(people) ? people : [people]).map(personHtml);
+  if (list.length <= 2) return list.join(' &amp; ');
+  return list.slice(0, -1).join(', ') + ' &amp; ' + list[list.length - 1];
 }
 
 function creditRow(label, valueHtml) {
@@ -242,6 +244,8 @@ ${header(true)}
         ${creditRow('writer', peopleHtml(s.writer))}
         ${creditRow('director', peopleHtml(s.director))}
         ${creditRow('cinematographer', peopleHtml(s.cinematographer))}
+        ${creditRow('composer', peopleHtml(s.composer))}
+        ${creditRow('cast', peopleHtml(s.cast))}
         ${creditRow('stage', s.stage ? esc(s.stage) : '')}
       </div>
     </div>

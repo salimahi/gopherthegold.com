@@ -15,6 +15,13 @@
     "cinematographer": [
       { "name": "R Jay Molina", "url": "https://www.imdb.com/name/nm4454777/?ref_=nv_sr_srsg_0_tt_0_nm_8_in_0_q_r%20jay%20molina" }
     ],
+    "composer": [
+      { "name": "Paul Willson (Advisor)", "url": null }
+    ],
+    "cast": [
+      { "name": "Adrianna Quaide", "url": null },
+      { "name": "Camden Lazar", "url": null }
+    ],
     "stage": "festival submissions",
     "logline": "Some cycles don't break. Jenna and Cal are stuck in a few.",
     "synopsis": [
@@ -42,6 +49,16 @@
     "cinematographer": [
       { "name": "R Jay Molina", "url": "https://www.imdb.com/name/nm4454777/?ref_=nv_sr_srsg_0_tt_0_nm_8_in_0_q_r%20jay%20molina" }
     ],
+    "composer": [
+      { "name": "Grace Dorl", "url": null }
+    ],
+    "cast": [
+      { "name": "Bryar Ajijola", "url": null },
+      { "name": "Cassandra Thorne", "url": null },
+      { "name": "Logan Eberhardt", "url": null },
+      { "name": "Maximiliano Garcia Hernandez", "url": "https://www.imdb.com/name/nm18274297/?ref_=ext_shr" },
+      { "name": "Moriah Young", "url": "https://www.imdb.com/name/nm12554084/" }
+    ],
     "stage": "coming soon",
     "logline": "A corporate focus group turns deadly as desperate strangers struggle to figure out who's human.",
     "synopsis": [
@@ -68,6 +85,12 @@
     "cinematographer": [
       { "name": "TBD", "url": null }
     ],
+    "composer": [
+      { "name": "TBD", "url": null }
+    ],
+    "cast": [
+      { "name": "TBD", "url": null }
+    ],
     "stage": "pre-production",
     "logline": "An olympic weightlifting mockumentary",
     "synopsis": [
@@ -91,6 +114,12 @@
     ],
     "cinematographer": [
       { "name": "R Jay Molina", "url": "https://www.imdb.com/name/nm4454777/?ref_=nv_sr_srsg_0_tt_0_nm_8_in_0_q_r%20jay%20molina" }
+    ],
+    "composer": [
+      { "name": "TBD", "url": null }
+    ],
+    "cast": [
+      { "name": "TBD", "url": null }
     ],
     "stage": "pre-production",
     "logline": "There's a match for everyone.",
@@ -116,6 +145,12 @@
     "cinematographer": [
       { "name": "Name", "url": null }
     ],
+    "composer": [
+      { "name": "TBD", "url": null }
+    ],
+    "cast": [
+      { "name": "TBD", "url": null }
+    ],
     "stage": "produced",
     "logline": "One-line logline about the story, written by [writer name].",
     "synopsis": [
@@ -140,6 +175,12 @@
     "cinematographer": [
       { "name": "Name", "url": null }
     ],
+    "composer": [
+      { "name": "TBD", "url": null }
+    ],
+    "cast": [
+      { "name": "TBD", "url": null }
+    ],
     "stage": "produced",
     "logline": "One-line logline about the story, written by [writer name].",
     "synopsis": [
@@ -163,6 +204,12 @@
     ],
     "cinematographer": [
       { "name": "Name", "url": null }
+    ],
+    "composer": [
+      { "name": "TBD", "url": null }
+    ],
+    "cast": [
+      { "name": "TBD", "url": null }
     ],
     "stage": "produced",
     "logline": "One-line logline about the story, written by [writer name].",
