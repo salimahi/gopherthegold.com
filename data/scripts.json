@@ -27,20 +27,20 @@
     "scriptUrl": null
   },
   {
-    "slug": "richmond-horror-48",
+    "slug": "captcha",
     "title": "Captcha",
     "section": "writers-room",
     "status": "coming soon",
     "year": null,
     "writer": [
-      { "name": "TBD", "url": null }
+      { "name": "Salimah Ismail", "url": "https://www.imdb.com/name/nm18761247/?ref_=fn_t_1" },
+      { "name": "Film Crew", "url": null }
     ],
     "director": [
-      { "name": "Salimah Ismail", "url": "https://www.imdb.com/name/nm18761247/?ref_=fn_t_1" },
-      { "name": "R Jay Molina", "url": "https://www.imdb.com/name/nm4454777/?ref_=nv_sr_srsg_0_tt_0_nm_8_in_0_q_r%20jay%20molina" }
+      { "name": "Salimah Ismail", "url": "https://www.imdb.com/name/nm18761247/?ref_=fn_t_1" }
     ],
     "cinematographer": [
-      { "name": "TBD", "url": null }
+      { "name": "R Jay Molina", "url": "https://www.imdb.com/name/nm4454777/?ref_=nv_sr_srsg_0_tt_0_nm_8_in_0_q_r%20jay%20molina" }
     ],
     "stage": "coming soon",
     "logline": "A corporate focus group turns deadly as desperate strangers struggle to figure out who's human.",
