@@ -28,26 +28,28 @@
   },
   {
     "slug": "richmond-horror-48",
-    "title": "Richmond Horror 48 Film",
+    "title": "Captcha",
     "section": "writers-room",
-    "status": "pre-production",
+    "status": "coming soon",
     "year": null,
     "writer": [
       { "name": "TBD", "url": null }
     ],
     "director": [
-      { "name": "TBD", "url": null }
+      { "name": "Salimah Ismail", "url": "https://www.imdb.com/name/nm18761247/?ref_=fn_t_1" },
+      { "name": "R Jay Molina", "url": "https://www.imdb.com/name/nm4454777/?ref_=nv_sr_srsg_0_tt_0_nm_8_in_0_q_r%20jay%20molina" }
     ],
     "cinematographer": [
       { "name": "TBD", "url": null }
     ],
-    "stage": "pre-production",
-    "logline": "A film based on the genre and prompts given October 8th 2026.",
+    "stage": "coming soon",
+    "logline": "A corporate focus group turns deadly as desperate strangers struggle to figure out who's human.",
     "synopsis": [
-      "TBD"
+      "A corporate focus group turns deadly as desperate strangers struggle to figure out who's human."
     ],
-    "poster": "assets/poster/Horror-48-2026.jpg",
-    "embedUrl": null,
+    "poster": "assets/poster/Captcha-Poster.png",
+    "embedUrl": "https://drive.google.com/file/d/1aG4394G7WkWgRCgTNYpRSKI2caVgs8fi/preview",
+    "mediaLabel": "trailer",
     "scriptUrl": null
   },
   {
