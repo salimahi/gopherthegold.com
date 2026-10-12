@@ -432,7 +432,7 @@ a.card, a.card-row {
   background: #fff;
 }
 
-.credit-row .value { font-size: 13px; font-weight: 600; }
+.credit-row .value { font-size: 13px; font-weight: 600; text-align: right; }
 
 .credit-row .value a {
   color: inherit;
