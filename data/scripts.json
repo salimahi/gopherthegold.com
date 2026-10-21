@@ -30,6 +30,21 @@
     ],
     "poster": "assets/poster/This-Again-Poster.png",
     "embedUrl": "https://www.youtube.com/embed/Y_9vPhrYNaI",
+    "stills": [
+      "assets/this-again/stills/Copy of TA_007.jpg",
+      "assets/this-again/stills/Copy of TA_006.jpg",
+      "assets/this-again/stills/Copy of TA_005.jpg",
+      "assets/this-again/stills/Copy of TA_004.jpg",
+      "assets/this-again/stills/Copy of TA_002.jpg"
+    ],
+    "bts": [
+      "assets/this-again/bts/Copy of 20260812_220648.jpg",
+      "assets/this-again/bts/Copy of 20260815_153557.jpg",
+      "assets/this-again/bts/Copy of IMG_6918.JPG",
+      "assets/this-again/bts/Copy of IMG_7203.jpg",
+      "assets/this-again/bts/Copy of IMG_7208.jpg",
+      "assets/this-again/bts/Copy of IMG_7209.jpg"
+    ],
     "mediaLabel": "trailer",
     "scriptUrl": null
   },
@@ -66,6 +81,17 @@
     ],
     "poster": "assets/poster/Captcha-Poster.png",
     "embedUrl": "https://www.youtube.com/embed/gZRUsAY-p-c",
+    "stills": [
+      "assets/captcha/stills/still-1.jpg",
+      "assets/captcha/stills/still-2.jpg",
+      "assets/captcha/stills/still-3.jpg",
+      "assets/captcha/stills/still-4.jpg",
+      "assets/captcha/stills/still-5.jpg",
+      "assets/captcha/stills/still-6.jpg",
+      "assets/captcha/stills/still-7.jpg",
+      "assets/captcha/stills/still-8.jpg",
+      "assets/captcha/stills/still-9.jpg"
+    ],
     "mediaLabel": "trailer",
     "fullFilmUrl": "https://www.youtube.com/embed/9tI4yueudLs",
     "scriptUrl": null

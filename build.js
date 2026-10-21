@@ -217,12 +217,72 @@ function creditRow(label, valueHtml) {
   return `<div class="credit-row"><span class="eyebrow">${esc(label)}</span><span class="value">${valueHtml}</span></div>`;
 }
 
+const carouselScript = `<script>
+(function () {
+  document.querySelectorAll('.carousel').forEach(function (carousel) {
+    var track = carousel.querySelector('.carousel-track');
+    var slides = carousel.querySelectorAll('.carousel-slide');
+    var perView = parseInt(carousel.dataset.perView, 10) || 1;
+    perView = Math.min(perView, slides.length);
+    var maxIndex = Math.max(slides.length - perView, 0);
+    var index = 0;
+
+    track.style.width = (slides.length / perView * 100) + '%';
+    slides.forEach(function (slide) {
+      slide.style.flexBasis = (100 / slides.length) + '%';
+    });
+
+    function update() {
+      track.style.transform = 'translateX(' + (-index * (100 / slides.length)) + '%)';
+    }
+
+    carousel.querySelector('.carousel-prev').addEventListener('click', function () {
+      index = index <= 0 ? maxIndex : index - 1;
+      update();
+    });
+    carousel.querySelector('.carousel-next').addEventListener('click', function () {
+      index = index >= maxIndex ? 0 : index + 1;
+      update();
+    });
+  });
+})();
+</script>`;
+
+// Image carousel block; images are paths relative to the repo root.
+function carouselBlock(label, id, images, alt, btnLabel) {
+  if (!images || !images.length) return '';
+  const slides = images
+    .map((img) => `<div class="carousel-slide"><img src="../${encodeURI(img)}" alt="${esc(alt)}"></div>`)
+    .join('\n        ');
+  return `
+  <div class="media-block">
+    <div class="eyebrow">${esc(label)}</div>
+    <div class="carousel" id="${id}" data-per-view="3">
+      <div class="carousel-track">
+        ${slides}
+      </div>
+      <button class="carousel-btn carousel-prev" type="button" aria-label="Previous ${btnLabel}">&larr;</button>
+      <button class="carousel-btn carousel-next" type="button" aria-label="Next ${btnLabel}">&rarr;</button>
+    </div>
+  </div>
+`;
+}
+
 function buildScriptPage(s) {
   const mediaBlock = s.embedUrl
     ? `<div class="media-placeholder"><iframe src="${esc(s.embedUrl)}" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="${esc(s.title)}"></iframe></div>`
     : s.scriptUrl
       ? `<div class="media-placeholder"><a class="card-link" href="${esc(s.scriptUrl)}" target="_blank" rel="noopener">read the script →</a></div>`
       : `<div class="media-placeholder"><span class="eyebrow">coming soon</span></div>`;
+
+  const fullFilmBlock = s.fullFilmUrl
+    ? `  <div class="media-block">
+    <div class="eyebrow">watch the full film</div>
+    <div class="media-placeholder"><iframe src="${esc(s.fullFilmUrl)}" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="${esc(s.title)} full film"></iframe></div>
+  </div>
+
+`
+    : '';
 
   const html = `${head(`${s.title} — ${SITE.name}`, s.logline || SITE.name, true)}
 ${header(true)}
@@ -256,13 +316,13 @@ ${header(true)}
     ${s.synopsis.map((p) => `<p>${esc(p)}</p>`).join('\n    ')}
   </div>
 
-  <div class="media-block">
+${fullFilmBlock}  <div class="media-block">
     <div class="eyebrow">${esc(s.mediaLabel || 'script / film')}</div>
     ${mediaBlock}
   </div>
-</div>
+${carouselBlock('film stills', 'stills-carousel', s.stills, `${s.title} film still`, 'still')}${carouselBlock('behind the scenes', 'bts-carousel', s.bts, `${s.title} behind the scenes`, 'photo')}</div>
 
-${footer(true)}`;
+${footer(true).replace('</body>', `${s.stills || s.bts ? carouselScript + '\n' : ''}</body>`)}`;
   fs.mkdirSync(path.join(ROOT, 'scripts'), { recursive: true });
   fs.writeFileSync(path.join(ROOT, 'scripts', `${s.slug}.html`), html);
 }
