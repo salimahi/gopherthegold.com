@@ -37,7 +37,7 @@
     "slug": "captcha",
     "title": "Captcha",
     "section": "writers-room",
-    "status": "coming soon",
+    "status": "available now",
     "year": null,
     "writer": [
       { "name": "Salimah Ismail", "url": "https://www.imdb.com/name/nm18761247/?ref_=fn_t_1" },
@@ -59,7 +59,7 @@
       { "name": "Maximiliano Garcia Hernandez", "url": "https://www.imdb.com/name/nm18274297/?ref_=ext_shr" },
       { "name": "Moriah Young", "url": "https://www.imdb.com/name/nm12554084/" }
     ],
-    "stage": "coming soon",
+    "stage": "available now",
     "logline": "Verify you are human.",
     "synopsis": [
       "A corporate focus group turns deadly as desperate strangers struggle to figure out who's human."
@@ -67,6 +67,7 @@
     "poster": "assets/poster/Captcha-Poster.png",
     "embedUrl": "https://www.youtube.com/embed/gZRUsAY-p-c",
     "mediaLabel": "trailer",
+    "fullFilmUrl": "https://www.youtube.com/embed/9tI4yueudLs",
     "scriptUrl": null
   },
   {
