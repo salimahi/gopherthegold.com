@@ -770,3 +770,10 @@ a.card, a.card-row {
   .main-nav li { width: 100%; }
   .main-nav a { display: block; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
 }
+
+/* card with a second link: whole card clicks through to the detail page */
+.card--stretched { position: relative; }
+.card--stretched:hover { transform: translate(-2px, -2px); box-shadow: 5px 5px 0 rgba(30, 36, 38, 0.15); }
+.card-link--main::after { content: ""; position: absolute; inset: 0; }
+.card-link--imdb { position: relative; z-index: 1; text-decoration: none; }
+.card-link--main { text-decoration: none; }

@@ -119,6 +119,15 @@ function footer(depth) {
 // ---------- homepage ----------
 
 function scriptCard(s) {
+  if (s.imdbUrl) {
+    return `<div class="card card--stretched">
+  ${thumb(s.poster, 'media placeholder')}
+  <div class="card-title">${esc(s.title)}</div>
+  <div class="eyebrow card-status">status: ${esc(s.status)}</div>
+  <a class="card-link card-link--main" href="scripts/${esc(s.slug)}.html">learn more →</a>
+  <a class="card-link card-link--imdb" href="${esc(s.imdbUrl)}" target="_blank" rel="noopener">view on IMDb →</a>
+</div>`;
+  }
   return `<a class="card" href="scripts/${esc(s.slug)}.html">
   ${thumb(s.poster, 'media placeholder')}
   <div class="card-title">${esc(s.title)}</div>
@@ -284,6 +293,11 @@ function buildScriptPage(s) {
 `
     : '';
 
+  const imdbLink = s.imdbUrl
+    ? `
+        <a class="card-link" href="${esc(s.imdbUrl)}" target="_blank" rel="noopener">view on IMDb →</a>`
+    : '';
+
   const html = `${head(`${s.title} — ${SITE.name}`, s.logline || SITE.name, true)}
 ${header(true)}
 
@@ -307,7 +321,7 @@ ${header(true)}
         ${creditRow('composer', peopleHtml(s.composer))}
         ${creditRow('cast', peopleHtml(s.cast))}
         ${creditRow('stage', s.stage ? esc(s.stage) : '')}
-      </div>
+      </div>${imdbLink}
     </div>
   </div>
 
