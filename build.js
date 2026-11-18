@@ -41,7 +41,8 @@ const SHOW_ARCHIVE = false;
 const scripts = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/scripts.json'), 'utf8'));
 const funded = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/funded-projects.json'), 'utf8'));
 
-const writersRoom = scripts.filter((s) => s.section === 'writers-room');
+const nowShowing = scripts.filter((s) => s.section === 'writers-room' && s.status === 'available now');
+const writersRoom = scripts.filter((s) => s.section === 'writers-room' && s.status !== 'available now');
 const archive = scripts.filter((s) => s.section === 'archive');
 
 // ---------- helpers ----------
@@ -92,7 +93,7 @@ function header(depth) {
     <nav aria-label="Primary">
       <ul class="main-nav" id="main-nav">
         <li><a href="${prefix}about.html">About</a></li>
-        <li><a href="${prefix}index.html#writers-room">Watch</a></li>
+        <li><a href="${prefix}index.html#now-showing">Watch</a></li>
         <li><a${externalLinkAttrs(SITE.write7in7Url)}>Compete</a></li>
         <li><a href="${prefix}funding.html">Fund</a></li>
         <li><a href="${prefix}contact.html">Contact</a></li>
@@ -160,6 +161,18 @@ ${header(false)}
     <h1>Gopher creativity.</h1>
     <p class="tagline">Whatever form, we dig it.</p>
     <a class="hero-link" href="about.html">Learn more &#8594;</a>
+  </div>
+</section>
+
+<section class="section" id="now-showing">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">available now</div>
+      <h2>Now Showing</h2>
+    </div>
+    <div class="grid grid--now-showing">
+      ${nowShowing.map(scriptCard).join('\n      ')}
+    </div>
   </div>
 </section>
 

@@ -221,6 +221,10 @@ h1, h2, h3 {
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
 }
 
+.grid--now-showing {
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+}
+
 .grid--archive {
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 24px;
