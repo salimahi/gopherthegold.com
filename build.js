@@ -52,9 +52,9 @@ const esc = (str) =>
   }[c]));
 
 function thumb(imgSrc, label, badge) {
-  const b = badge ? `<span class="thumb-badge">${esc(badge)}</span>` : '';
-  if (imgSrc) return `<div class="thumb"><img src="${esc(imgSrc)}" alt="">${b}</div>`;
-  return `<div class="thumb"><span class="thumb-label">${esc(label)}</span>${b}</div>`;
+  const attr = badge ? ` data-badge="${esc(badge)}"` : '';
+  if (imgSrc) return `<div class="thumb"${attr}><img src="${esc(imgSrc)}" alt=""></div>`;
+  return `<div class="thumb"${attr}><span class="thumb-label">${esc(label)}</span></div>`;
 }
 
 function externalLinkAttrs(url) {
