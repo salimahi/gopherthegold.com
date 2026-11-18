@@ -41,8 +41,7 @@ const SHOW_ARCHIVE = false;
 const scripts = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/scripts.json'), 'utf8'));
 const funded = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/funded-projects.json'), 'utf8'));
 
-const nowShowing = scripts.filter((s) => s.section === 'writers-room' && s.status === 'available now');
-const writersRoom = scripts.filter((s) => s.section === 'writers-room' && s.status !== 'available now');
+const writersRoom = scripts.filter((s) => s.section === 'writers-room');
 const archive = scripts.filter((s) => s.section === 'archive');
 
 // ---------- helpers ----------
@@ -52,9 +51,10 @@ const esc = (str) =>
     '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;',
   }[c]));
 
-function thumb(imgSrc, label) {
-  if (imgSrc) return `<div class="thumb"><img src="${esc(imgSrc)}" alt=""></div>`;
-  return `<div class="thumb"><span class="thumb-label">${esc(label)}</span></div>`;
+function thumb(imgSrc, label, badge) {
+  const b = badge ? `<span class="thumb-badge">${esc(badge)}</span>` : '';
+  if (imgSrc) return `<div class="thumb"><img src="${esc(imgSrc)}" alt="">${b}</div>`;
+  return `<div class="thumb"><span class="thumb-label">${esc(label)}</span>${b}</div>`;
 }
 
 function externalLinkAttrs(url) {
@@ -93,7 +93,7 @@ function header(depth) {
     <nav aria-label="Primary">
       <ul class="main-nav" id="main-nav">
         <li><a href="${prefix}about.html">About</a></li>
-        <li><a href="${prefix}index.html#now-showing">Watch</a></li>
+        <li><a href="${prefix}index.html#writers-room">Watch</a></li>
         <li><a${externalLinkAttrs(SITE.write7in7Url)}>Compete</a></li>
         <li><a href="${prefix}funding.html">Fund</a></li>
         <li><a href="${prefix}contact.html">Contact</a></li>
@@ -120,9 +120,10 @@ function footer(depth) {
 // ---------- homepage ----------
 
 function scriptCard(s) {
+  const badge = s.status === 'available now' ? 'Now Showing' : '';
   if (s.imdbUrl) {
     return `<div class="card card--stretched">
-  ${thumb(s.poster, 'media placeholder')}
+  ${thumb(s.poster, 'media placeholder', badge)}
   <div class="card-title">${esc(s.title)}</div>
   <div class="eyebrow card-status">status: ${esc(s.status)}</div>
   <a class="card-link card-link--main" href="scripts/${esc(s.slug)}.html">learn more →</a>
@@ -130,7 +131,7 @@ function scriptCard(s) {
 </div>`;
   }
   return `<a class="card" href="scripts/${esc(s.slug)}.html">
-  ${thumb(s.poster, 'media placeholder')}
+  ${thumb(s.poster, 'media placeholder', badge)}
   <div class="card-title">${esc(s.title)}</div>
   <div class="eyebrow card-status">status: ${esc(s.status)}</div>
   <div class="card-link">learn more →</div>
@@ -161,18 +162,6 @@ ${header(false)}
     <h1>Gopher creativity.</h1>
     <p class="tagline">Whatever form, we dig it.</p>
     <a class="hero-link" href="about.html">Learn more &#8594;</a>
-  </div>
-</section>
-
-<section class="section" id="now-showing">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">available now</div>
-      <h2>Now Showing</h2>
-    </div>
-    <div class="grid grid--now-showing">
-      ${nowShowing.map(scriptCard).join('\n      ')}
-    </div>
   </div>
 </section>
 
