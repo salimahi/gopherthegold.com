@@ -1,25 +1,25 @@
 {
   "active": [
     {
-      "name": "Shadow of a Flame",
-      "type": "seed & spark campaign",
-      "status": "greenlit · filming october",
-      "logline": "An amnesiac couple fights to stick together in an uncannily romantic cabin where dark forces reset them whenever they try to leave.",
-      "url": "https://seedandspark.com/fund/shadow-of-a-flame",
-      "thumbnail": "assets/funding/shadow-of-a-flame.jpg"
-    },
-    {
       "name": "A Boat in the Storm",
       "type": "cinematography for actors campaign",
-      "status": "greenlit · filming november",
+      "status": "greenlit · post-production",
       "logline": "Ready to steer her love life into the right lane, Brigid prepares for a perfect reunion with her ex Nayel. Just as the current starts sweeping them away, Nayel discharges a torpedo of news that will change them forever.",
       "url": "https://give.cinematographyforactors.com/a-boat-in-the-storm",
       "thumbnail": "assets/funding/a-boat-in-the-storm.jpg"
     },
     {
-      "name": "The Downline",
+      "name": "Shadow of a Flame",
       "type": "seed & spark campaign",
       "status": "greenlit · filming december",
+      "logline": "An amnesiac couple fights to stick together in an uncannily romantic cabin where dark forces reset them whenever they try to leave.",
+      "url": "https://seedandspark.com/fund/shadow-of-a-flame",
+      "thumbnail": "assets/funding/shadow-of-a-flame.jpg"
+    },
+    {
+      "name": "The Downline",
+      "type": "seed & spark campaign",
+      "status": "greenlit · filming january 2027",
       "logline": "A top-earner in a multilevel marketing company struggles to maintain her sanity after one of her recruits commits suicide.",
       "url": "https://seedandspark.com/fund/the-downline",
       "thumbnail": "assets/funding/the-downline.jpg"
